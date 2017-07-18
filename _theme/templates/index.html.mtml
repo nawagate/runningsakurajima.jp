@@ -1,0 +1,89 @@
+<mt:Ignore>
+<!--
+  ＜インデックステンプレート＞
+  テンプレート名
+    インデックスページ
+  引数
+
+  機能
+
+-->
+</mt:Ignore>
+<mt:Include module="config">
+<!DOCTYPE html>
+<html lang="<mt:BlogLanguage>" itemscope itemtype="http://schema.org/WebPage">
+<head>
+<meta charset="<mt:PublishCharset>">
+<title><mt:BlogName encode_html="1"></title>
+<meta name="description" content="<mt:BlogDescription remove_html="1" encede_html="1">">
+<meta name="keywords" content="<mt:GetVar name="metakeywords">">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="shortcut icon" href="<mt:BlogURL encode_html="1">favicon.ico">
+<link rel="apple-touch-icon" href="<mt:BlogURL encode_html="1">apple-touch-icon.png">
+<link rel="start" href="<mt:BlogURL encode_html="1">">
+<mt:CanonicalLink>
+<!-- Open Graph Protocol -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="<mt:BlogLanguage setvar="blog_lang"><mt:If name="blog_lang" eq="ja">ja_JP<mt:Else><mt:Var name="blog_lang"></mt:If>">
+<meta property="og:title" content="<mt:BlogName encode_html="1">">
+<meta property="og:url" content="<mt:BlogURL encode_html="1">">
+<meta property="og:description" content="<mt:BlogDescription remove_html="1" encede_html="1">">
+<meta property="og:site_name" content="<mt:BlogName encode_html="1">">
+<meta property="og:image" content="<mt:BlogURL encode_html="1">images/ogimage.jpg">
+<!-- Microdata -->
+<meta itemprop="description" content="<mt:BlogDescription remove_html="1" encede_html="1">">
+<link itemprop="url" href="<mt:BlogURL encode_html="1">">
+<link itemprop="image" href="<mt:BlogURL encode_html="1">images/ogimage.jpg">
+<mt:Include module="common_stylesheet">
+<mt:Include module="common_head_js">
+</head>
+<mt:SetVarBlock name="thispage">TOP</mt:SetVarBlock>
+<body id="sitetop">
+  <mt:Include module="header">
+  <mt:Pages no_folder="1">
+    <section id="<mt:PageBasename>" class="p-section p-section--<mt:PageBasename>">
+      <div class="container">
+        <h2 class="p-section__title">
+          <mt:PageTitle encode_html="1">
+          <small class="p-section__title__label"><mt:PageBasename separator=" "></small>
+        </h2>
+        <mt:PageBody>
+        <mt:PageMore>
+      </div>
+    </section>
+  </mt:Pages>
+  <mt:If tag="EntriesCount" gt="0">
+    <section id="toppage-news" class="p-section p-section--toppage-news">
+      <div class="container">
+        <h2 class="p-section__title">ニュース <small class="p-section__title__label">news</small></h2>
+        <div class="row">
+         <mt:Entries lastn="4">
+            <div class="col-sm-6 col-md-3">
+              <div class="thumbnail">
+                <a href="<mt:EntryPermalink>">
+                  <mt:If tag="CustomFieldValue" identifier="main_image_entry">
+                    <img src="<mt:CustomFieldAsset identifier="main_image_entry"><mt:AssetThumbnailURL width="300"></mt:CustomFieldAsset>" alt="<mt:EntryTitle>">
+                  <mt:Else>
+                    <mt:EntryAssets type="image" sort_order="ascend" limit="1">
+                      <img src="<mt:AssetThumbnailURL width="300">" alt="<mt:EntryTitle>">
+                    <mt:Else>
+                      <img class="img-responsive" src="http://placehold.jp/300x200.png" alt="ボランティアスタッフの募集は終了しました。">
+                    </mt:EntryAssets>
+                  </mt:If>
+                </a>
+                <div class="caption">
+                  <h3 class="caption__title"><a href="<mt:EntryPermalink>"><mt:EntryTitle encode_html="1"></a></h3>
+                  <p class="caption__excerpt"><mt:EntryExcerpt></p>
+                </div>
+              </div>
+            </div>
+          </mt:Entries>
+        </div>
+      </div>
+    </section>
+  </mt:If>
+  <mt:Include module="footer">
+  <mt:Include module="common_bottom_js">
+</body>
+</html>

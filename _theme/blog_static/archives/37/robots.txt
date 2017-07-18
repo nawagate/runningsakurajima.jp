@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /.shared/
+Disallow: /.service/
+Disallow: /.preview/
+Disallow: /.not-found/
+
+Sitemap: http://www.runningsakurajima.jp/sitemap.xml

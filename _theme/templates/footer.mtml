@@ -1,0 +1,146 @@
+<mt:Ignore>
+<!--
+  ＜テンプレートモジュール＞
+  テンプレート名
+    フッター
+  引数
+
+  戻り値
+
+  機能
+
+-->
+</mt:Ignore>
+<footer class="l-footer">
+  <div id="return-pagetop" class="l-footer__pagetop">
+    <a href="<mt:WebsiteURL>#pagetop"><img src="<mt:WebsiteURL>images/return-pagetop.png" alt="このページのトップに戻る"></a>
+  </div>
+  <div class="l-footer__info">
+    <div class="container">
+      <div class="row l-footer__info__menu">
+        <div class="col-sm-6">
+          <p class="l-footer__info__menu__title">メニュー</p>
+          <ul class="l-footer__info__menu__list l-footer__info__menu__list--toppage">
+            <li><a href="<mt:WebsiteURL>#home">ホーム</a></li>
+            <mt:Pages>
+              <li><a href="<mt:WebsiteURL>#<mt:PageBasename>"><mt:PageTitle encode_html="1"></a></li>
+            </mt:Pages>
+            <li><a href="<mt:WebsiteURL>#toppage-news">ニュース</a></li>
+          </ul>
+        </div>
+        <div class="col-sm-3">
+          <p class="l-footer__info__menu__title">ニュース</p>
+          <mt:Categories>
+            <mt:If name="__first__">
+              <ul class="l-footer__info__menu__list">
+            </mt:If>
+            <li><a href="<mt:CategoryArchiveLink>"><mt:CategoryLabel></a></li>
+            <mt:If name="__last__">
+              </ul>
+            </mt:If>
+          </mt:Categories>
+        </div>
+        <div class="col-sm-3">
+          <p class="l-footer__info__menu__title">過去の大会</p>
+          <ul class="l-footer__info__menu__list">
+            <li><a href="<mt:WebsiteURL>archives/31/" target="_blank">第31回 <span class="fa fa-external-link" aria-hidden="true"></span></a></li>
+            <li><a href="<mt:WebsiteURL>archives/32/" target="_blank">第32回 <span class="fa fa-external-link" aria-hidden="true"></span></a></li>
+            <li><a href="<mt:WebsiteURL>archives/33/" target="_blank">第33回 <span class="fa fa-external-link" aria-hidden="true"></span></a></li>
+            <li><a href="<mt:WebsiteURL>archives/34/" target="_blank">第34回 <span class="fa fa-external-link" aria-hidden="true"></span></a></li>
+            <li><a href="<mt:WebsiteURL>archives/35/" target="_blank">第35回 <span class="fa fa-external-link" aria-hidden="true"></span></a></li>
+            <li><a href="<mt:WebsiteURL>archives/36/" target="_blank">第36回 <span class="fa fa-external-link" aria-hidden="true"></span></a></li>
+            <li><a href="<mt:WebsiteURL>archives/37/" target="_blank">第37回 <span class="fa fa-external-link" aria-hidden="true"></span></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 l-footer__info__address">
+          <address>
+            <strong>ランニング桜島大会実行委員会事務局</strong><br> 〒892-8677
+            <br> 鹿児島県鹿児島市山下町11-1（鹿児島市観光交流局スポーツ課内）
+            <br>
+            <abbr title="電話番号"><span class="fa fa-phone-square" aria-hidden="true"></span></abbr>&nbsp;<span class="u-text--big u-text--bold">099-803-9621</span><br>
+            <abbr title="受付時間"><span class="fa fa-clock-o" aria-hidden="true"></span>&nbsp;</abbr>&nbsp;8:30～17:15（土・日・祝日は休業です）
+          </address>
+        </div>
+        <div class="col-sm-6 l-footer__info__pamphlet">
+          <p>募集パンフレットをＰＤＦにてご覧いただけます。</p>
+          <div><a class="btn btn-default" href="#" role="button">募集パンフレット（ＰＤＦ）&nbsp;<span class="fa fa-download" aria-hidden="true"></span></a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <mt:Assets lastn="0" type="image" field:NcImageAd="1">
+      <mt:AssetsHeader>
+        <aside class="l-footer__ad">
+          <div class="row row-xs">
+      </mt:AssetsHeader>
+      <div class="col-xs-3">
+        <a href="<mt:CustomFieldValue identifier="NcImageLinkUrl">" title="<mt:AssetLabel>" target="_blank"><img src="<mt:AssetThumbnailURL width="200">" alt="<mt:AssetLabel>"></a>
+      </div>
+      <mt:AssetsFooter>
+          </div>
+        </aside>
+      </mt:AssetsFooter>
+    </mt:Assets>
+    <aside class="l-footer__sponsor">
+      <dl class="dl-horizontal">
+        <dt>主催</dt>
+        <dd>
+          <ul>
+            <li>ランニング桜島大会実行委員会</li>
+            <li>鹿児島市</li>
+            <li>南日本新聞社</li>
+            <li>鹿児島市教育委員会</li>
+            <li>（一財）鹿児島陸上競技協会</li>
+            <li>鹿児島地区陸上競技協会</li>
+            <li>鹿児島走ろう会</li>
+          </ul>
+        </dd>
+        <dt>主管</dt>
+        <dd>
+          <ul>
+            <li>鹿児島地区陸上競技協会</li>
+          </ul>
+        </dd>
+        <dt>後援</dt>
+        <dd>
+          <ul>
+            <li>鹿児島県</li>
+            <li>鹿児島県教育委員会</li>
+            <li>（公社）鹿児島県医師会</li>
+            <li>（公社）鹿児島市医師会</li>
+            <li>（公財）鹿児島県体育協会</li>
+            <li>鹿児島市体育協会</li>
+            <li>（公社）鹿児島県観光連盟</li>
+            <li>（公財）鹿児島観光コンベンション協会</li>
+            <li>（公社）鹿児島県特産品協会</li>
+            <li>鹿児島市スポーツ推進委員協議会</li>
+          </ul>
+        </dd>
+        <dt>特別協賛</dt>
+        <dd>
+          <ul>
+            <li><img src="<mt:WebsiteURL>images/footer-ntt-nishinihon.png" alt="ＮＴＴ西日本"></li>
+            <li><img src="<mt:WebsiteURL>images/footer-runtes.png" alt="RUNTES"></li>
+            <li><img src="<mt:WebsiteURL>images/footer-runners-chip.png" alt="Runners Chip"></li>
+          </ul>
+        </dd>
+      </dl>
+    </aside>
+    <aside class="l-footer__links">
+      <div class="row">
+        <div class="col-xs-6 col-sm-offset-3 col-sm-3">
+          <a href="http://www.sakurajima-kinkowan-geo.jp/" target="_blank"><img class="img-responsive" src="<mt:WebsiteURL>images/banner-sakurajima-kinkowan-geo.png" alt="桜島・錦江湾ジオパーク"></a>
+        </div>
+        <div class="col-xs-6 col-sm-3">
+          <a href="http://www.meijiishin150countdown.com/" target="_blank"><img class="img-responsive" src="<mt:WebsiteURL>images/banner-meijiishin150countdown.png" alt="明治維新150周年 維新のふるさと鹿児島市"></a>
+        </div>
+      </div>
+    </aside>
+    <p class="l-footer__copyright">
+      <small>&copy; RUNNING SAKURAJIMA</small>
+    </p>
+  </div>
+</footer>
