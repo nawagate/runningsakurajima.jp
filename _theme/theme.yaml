@@ -6,15 +6,15 @@ author_name: "第37回 ランニング桜島大会"
 description: "runningsakurajima"
 class: "blog"
 elements:
-  # blog_static_files:
-  #   component: '~'
-  #   data:
-  #     - archives
-  #     - fonts
-  #     - images
-  #     - scripts
-  #     - styles
-  #   importer: blog_static_files
+  blog_static_files:
+    component: '~'
+    data:
+      # - archives
+      - fonts
+      - images
+      - scripts
+      - styles
+    importer: blog_static_files
   custom_fields:
     component: commercial
     data:
