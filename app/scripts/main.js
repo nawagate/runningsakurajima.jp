@@ -12,7 +12,9 @@
   $('#global-navigation a').smoothScroll({
     offset: -100
   });
-  $('#faq-headings a').smoothScroll();
+  $('a.smooth-scroll').smoothScroll({
+    offset: -100
+  });
   $('#return-pagetop a').smoothScroll();
   // countdown
   $('#countdown-timer').countdown('2017/12/3 10:00:00').on('update.countdown', function (event) {

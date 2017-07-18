@@ -20,6 +20,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <link rel="shortcut icon" href="<mt:BlogURL encode_html="1">favicon.ico">
+<link rel="apple-touch-icon" href="<mt:WebsiteURL>apple-touch-icon.png">
 <link rel="apple-touch-icon" href="<mt:BlogURL encode_html="1">apple-touch-icon.png">
 <link rel="start" href="<mt:BlogURL encode_html="1">">
 <mt:CanonicalLink>
@@ -63,13 +64,9 @@
               <div class="thumbnail">
                 <a href="<mt:EntryPermalink>">
                   <mt:If tag="CustomFieldValue" identifier="main_image_entry">
-                    <img src="<mt:CustomFieldAsset identifier="main_image_entry"><mt:AssetThumbnailURL width="320"></mt:CustomFieldAsset>" alt="<mt:EntryTitle>">
+                    <img class="img-responsive" src="<mt:CustomFieldAsset identifier="main_image_entry"><mt:AssetThumbnailURL width="320"></mt:CustomFieldAsset>" alt="<mt:EntryTitle>">
                   <mt:Else>
-                    <mt:EntryAssets type="image" sort_order="ascend" limit="1">
-                      <img src="<mt:AssetThumbnailURL width="320">" alt="<mt:EntryTitle>">
-                    <mt:Else>
-                      <img class="img-responsive" src="http://placehold.jp/320x213.png" alt="ボランティアスタッフの募集は終了しました。">
-                    </mt:EntryAssets>
+                    <img class="img-responsive" src="<mt:WebsiteURL>images/no-image.png" alt="<mt:EntryTitle>">
                   </mt:If>
                 </a>
                 <div class="caption">

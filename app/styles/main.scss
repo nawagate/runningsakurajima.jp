@@ -61,9 +61,9 @@ $brand-danger: $aka;
 // //** Global text color on `<body>`.
 // $text-color:            $gray-dark !default;
 // //** Global textual link color.
-$link-color:            $brand-primary;
+$link-color : $brand-primary;
 // //** Link hover color set via `darken()` function.
-$link-hover-color:      $link-color;
+$link-hover-color : $link-color;
 // //** Link hover decoration.
 // $link-hover-decoration: underline !default;
 // //== Typography
@@ -428,7 +428,7 @@ $navbar-default-toggle-icon-bar-bg: $palette-monof;
 // $state-info-bg:                  #d9edf7 !default;
 // $state-info-border:              darken(adjust-hue($state-info-bg, -10), 7%) !default;
 // $state-warning-text:             #8a6d3b !default;
-// $state-warning-bg:               #fcf8e3 !default;
+$state-warning-bg : $paris-daisy;
 // $state-warning-border:           darken(adjust-hue($state-warning-bg, -10), 5%) !default;
 // $state-danger-text:              #a94442 !default;
 // $state-danger-bg:                #f2dede !default;
@@ -617,7 +617,7 @@ $navbar-default-toggle-icon-bar-bg: $palette-monof;
 // //** Thumbnail background color
 // $thumbnail-bg:                $body-bg !default;
 // //** Thumbnail border color
-$thumbnail-border:           $palette-monoe;
+$thumbnail-border : $palette-monoe;
 // //** Thumbnail border radius
 // $thumbnail-border-radius:     $border-radius-base !default;
 // //** Custom text color for thumbnail captions
@@ -1090,10 +1090,9 @@ table {
       color: $palette-main01;
     }
     &__body {
-      > * {
+      >* {
         margin-bottom: 0;
-      }
-      // p,
+      } // p,
       // ul {
       //   margin-bottom: 0;
       // }
@@ -1202,6 +1201,17 @@ table {
     &__symbol {
       margin-bottom: 20px;
     }
+    &__entry {
+      @media (max-width: $screen-sm-max) {
+        display: none;
+      }
+      @media(min-width:$screen-md-min) {
+        position: fixed;
+        top: 150px;
+        right: 20px;
+        z-index: $zindex-modal;
+      }
+    }
     &__countdown {
       &__message {
         color: $palette-monof;
@@ -1265,12 +1275,10 @@ table {
     &__place-event {}
   }
   &--points {
+    counter-reset: counter;
     .container {
       max-width: 800px;
     }
-
-    counter-reset: counter;
-
     &__title {
       position: relative;
       padding-left: 1.5em;
@@ -1289,9 +1297,12 @@ table {
         font-weight: normal;
         padding-left: 2px;
         vertical-align: middle;
-         border-radius: 50%;
+        border-radius: 50%;
         content: counter(counter);
         counter-increment: counter;
+      }
+      .badge {
+        background-color: $palette-main02;
       }
     }
     &__title1,
