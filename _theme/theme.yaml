@@ -123,9 +123,6 @@ elements:
           header:
             filename: header.mtml
             label: header
-          header_news:
-            filename: header_news.mtml
-            label: header_news
         page:
           page:
             filename: page.mtml
