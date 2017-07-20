@@ -14,7 +14,11 @@
 <mt:Entries paginate_by="$paginate">
   <article class="p-content">
     <mt:If tag="CustomFieldValue" identifier="main_image_entry">
-      <figure class="p-content__image"><img src="<mt:CustomFieldAsset identifier="main_image_entry"><mt:AssetThumbnailURL width="240"></mt:CustomFieldAsset>" alt="<mt:AssetLabel>"></figure>
+      <figure class="p-content__image">
+        <mt:CustomFieldAsset identifier="main_image_entry">
+          <img src="<mt:AssetThumbnailURL width="240">" alt="<mt:AssetLabel>">
+        </mt:CustomFieldAsset>
+      </figure>
     <mt:Else>
       <figure class="p-content__image"><img src="<mt:WebsiteURL>images/no-image.png" alt="no image"></figure>
     </mt:If>

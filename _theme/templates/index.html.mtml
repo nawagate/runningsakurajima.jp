@@ -64,7 +64,9 @@
               <div class="thumbnail">
                 <a href="<mt:EntryPermalink>">
                   <mt:If tag="CustomFieldValue" identifier="main_image_entry">
-                    <img class="img-responsive" src="<mt:CustomFieldAsset identifier="main_image_entry"><mt:AssetThumbnailURL width="320"></mt:CustomFieldAsset>" alt="<mt:AssetLabel>">
+                    <mt:CustomFieldAsset identifier="main_image_entry">
+                      <img class="img-responsive" src="<mt:AssetThumbnailURL width="320">" alt="<mt:AssetLabel>">
+                    </mt:CustomFieldAsset>
                   <mt:Else>
                     <img class="img-responsive" src="<mt:WebsiteURL>images/no-image.png" alt="no image">
                   </mt:If>
