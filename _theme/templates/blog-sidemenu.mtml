@@ -1,24 +1,38 @@
-        <nav class="side-nav">
-          <h1>カテゴリ</h1>
-         <mt:ArchiveList archive_type="Category">
-         <mt:ArchiveListHeader>
-          <ul>
-          </mt:ArchiveListHeader>
-            <li><a href="<$mt:ArchiveLink encode_html="1"$>"><$mt:ArchiveTitle$> (<$mt:ArchiveCount$>)</a></li>
-          <mt:ArchiveListFooter>
-          </ul>
-          </mt:ArchiveListFooter>
-          </mt:ArchiveList>
-        </nav>
-        <nav class="side-nav">
-          <mt:ArchiveList archive_type="Yearly">
-          <mt:ArchiveListHeader>
-          <h1>年別アーカイブ</h1>
-          <ul>
-          </mt:ArchiveListHeader>
-            <li><a href="<$mt:ArchiveLink encode_html="1"$>"><$mt:ArchiveTitle$> (<$mt:ArchiveCount$>)</a></li>
-          <mt:ArchiveListFooter>
-          </ul>
-          </mt:ArchiveListFooter>
-          </mt:ArchiveList>
-        </nav>
+<mt:Ignore>
+<!--
+  ＜テンプレートモジュール＞
+  テンプレート名
+    blog-sidemenu
+  引数
+
+  戻り値
+
+  機能
+
+-->
+</mt:Ignore>
+<mt:ArchiveList archive_type="Category">
+  <mt:ArchiveListHeader>
+    <nav class="p-widget">
+      <h2 class="p-widget__title">カテゴリ</h2>
+        <ul>
+  </mt:ArchiveListHeader>
+  <li><a href="<mt:ArchiveLink encode_html="1">"><mt:ArchiveTitle> (<mt:ArchiveCount>)</a></li>
+  <mt:ArchiveListFooter>
+      </ul>
+    </nav>
+  </mt:ArchiveListFooter>
+</mt:ArchiveList>
+<mt:ArchiveList archive_type="Yearly">
+  <mt:ArchiveListHeader>
+    <nav class="p-widget">
+      <h2 class="p-widget__title">年別アーカイブ</h2>
+      <ul>
+  </mt:ArchiveListHeader>
+  <li><a href="<mt:ArchiveLink encode_html="1">"><mt:ArchiveTitle> (<mt:ArchiveCount>)</a></li>
+  <mt:ArchiveListFooter>
+      </ul>
+    </nav>
+  </mt:ArchiveListFooter>
+</mt:ArchiveList>
+
