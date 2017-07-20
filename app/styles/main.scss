@@ -31,9 +31,9 @@ $palette-mono2: #222;
 $palette-mono1: #111;
 $palette-mono0: #000;
 // モノトーンエキストラカラー
-$palette-mono01: #E3E3E3;
-$palette-mono02: #F3F3F3;
-$palette-mono03: #D3D3D3;
+$palette-mono01: #e3e3e3;
+$palette-mono02: #f3f3f3;
+$palette-mono03: #d3d3d3;
 // メインカラー
 $palette-main01: $turquoise-blue;
 $palette-main02: $italian-rose;
@@ -41,7 +41,7 @@ $palette-main03: $paris-daisy;
 $palette-main04: $turquoise;
 $palette-main05: $pale-turquoise;
 // アクセントカラー
-$palette-accent01: #1FB5CC;
+$palette-accent01: #1fb5cc;
 // $gray-base:              #000 !default;
 // $gray-darker:            lighten($gray-base, 13.5%) !default; // #222
 // $gray-dark:              lighten($gray-base, 20%) !default;   // #333
@@ -69,13 +69,7 @@ $link-hover-color: $link-color;
 // //== Typography
 // //
 // //## Font, line-height, and color for body text, headings, and more.
-$font-family-sans-serif: "Helvetica Neue",
-Helvetica,
-"ヒラギノ角ゴ ProN W3",
-"Hiragino Kaku Gothic ProN",
-メイリオ,
-Meiryo,
-sans-serif;
+$font-family-sans-serif: "Helvetica Neue", Helvetica, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", メイリオ, Meiryo, sans-serif;
 // $font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
 // //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 // $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
@@ -104,7 +98,7 @@ $headings-line-height: 1.5;
 // //** Load fonts from this directory.
 // // [converter] If $bootstrap-sass-asset-helper if used, provide path relative to the assets load path.
 // // [converter] This is because some asset helpers, such as Sprockets, do not work with file-relative paths.
-$icon-font-path: '../fonts/';
+$icon-font-path: "../fonts/";
 // //** File name for all font files.
 // $icon-font-name:          "glyphicons-halflings-regular" !default;
 // //** Element ID within SVG icon file.
@@ -738,7 +732,7 @@ body {
 dl {
   dt,
   dd {
-    >* {
+    > * {
       margin-bottom: 0;
     }
   }
@@ -766,15 +760,15 @@ table {
 
 .l-header {
   .navbar.navbar-default {
+    padding: 5px 0;
     transition: background-color 1s ease;
     @media (max-width: $screen-sm-max) {
       font-weight: bold;
     }
     &.is-paint {
       background-color: rgba($palette-main01, 1);
-      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
     }
-    padding: 5px 0;
     .navbar-collapse {
       margin-top: 5px;
       @media(min-width: $screen-md-min) {
@@ -808,10 +802,10 @@ table {
       }
       @media(min-width:$screen-sm-min) {
         float: left;
+        margin-bottom: 0;
         margin-left: 10px;
         font-size: $font-size-base;
         line-height: 1;
-        margin-bottom: 0;
       }
       @media(min-width:$screen-md-min) {
         margin-top: 12px;
@@ -828,7 +822,7 @@ table {
         margin-left: -10px;
         font-size: 14px;
         @include list-unstyled;
-        >li {
+        > li {
           display: inline-block;
           padding-left: 10px;
           a {
@@ -851,8 +845,8 @@ table {
 }
 
 .l-eyecatch {
-  margin-top: 80px;
   position: relative;
+  margin-top: 80px;
   background: url("../images/toppage-background-run.jpg") no-repeat center center;
   background-size: cover;
   &::before {
@@ -862,14 +856,14 @@ table {
     width: 100%;
     height: 100%;
     background: $palette-main02;
-    opacity: 0.8;
     content: "";
+    opacity: 0.8;
   }
   &__title {
+    position: relative;
+    margin: ($line-height-computed *2) 0;
     color: $palette-monof;
     font-size: 30px;
-    margin: ($line-height-computed *2) 0;
-    position: relative;
   }
 }
 
@@ -899,16 +893,16 @@ table {
           font-weight: bold;
         }
         &__list {
-          font-size: 14px;
           margin-bottom: 0;
           list-style-type: none;
+          font-size: 14px;
           &--toppage {
-            >li {
+            > li {
               display: inline-block;
               width: 45%;
             }
           }
-          >li {
+          > li {
             position: relative;
             &:before {
               position: absolute;
@@ -921,7 +915,7 @@ table {
               text-align: center;
               font-family: FontAwesome;
             }
-            >a {
+            > a {
               color: $palette-monof;
             }
           }
@@ -952,7 +946,7 @@ table {
       ul {
         margin-left: -5px;
         @include list-unstyled;
-        >li {
+        > li {
           display: inline-block;
           padding-right: 5px;
           padding-left: 5px;
@@ -965,9 +959,9 @@ table {
     margin-bottom: $line-height-computed;
   }
   &__copyright {
-    text-align: center;
     margin-top: ($line-height-computed / 2);
     margin-bottom: ($line-height-computed / 2);
+    text-align: center;
   }
 }
 
@@ -995,7 +989,7 @@ table {
 }
 
 .panel {
-  .panel-body>* {
+  .panel-body > * {
     margin-bottom: 0;
   }
 }
@@ -1004,7 +998,7 @@ table {
   .row-xs {
     margin-right: ($grid-gutter-width / 4 * -1);
     margin-left: ($grid-gutter-width / 4 * -1);
-    [class^='col-'] {
+    [class^="col-"] {
       padding-right: ($grid-gutter-width / 4);
       padding-left: ($grid-gutter-width / 4);
     }
@@ -1074,8 +1068,8 @@ table {
     padding: 20px;
     border: 2px solid $gray-lighter;
     -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    border-radius: 8px;
+       -moz-border-radius: 8px;
+            border-radius: 8px;
     background: $palette-monof;
     @media (max-width: $screen-xs-max) {
       float: right;
@@ -1128,7 +1122,7 @@ table {
       color: $palette-main01;
     }
     &__body {
-      >* {
+      > * {
         margin-bottom: 0;
       }
     }
@@ -1195,8 +1189,8 @@ table {
     }
     &__countdown {
       &__message {
-        color: $palette-monof;
         margin-bottom: 0;
+        color: $palette-monof;
         @media (max-width: $screen-xs-max) {
           font-size: 16px;
         }
@@ -1205,16 +1199,16 @@ table {
         }
       }
       &__timer {
-        line-height: 1;
-        background-color: rgba($palette-mono0, 0.5);
-        margin-left: auto;
         margin-right: auto;
-        border-radius: 10px;
         margin-bottom: 30px;
+        margin-left: auto;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: rgba($palette-mono0, 0.5);
         color: $palette-monof;
         font-weight: 100;
         font-family: "Lato", sans-serif;
-        padding: 10px;
+        line-height: 1;
         @media (max-width: $screen-xs-max) {
           width: 90%;
         }
@@ -1224,20 +1218,19 @@ table {
         &__frame {
           display: inline-block;
           &__number {
+            padding: 10px;
+            border-radius: 10px;
+            background-color: rgba($palette-mono0, 0.5);
             @media (max-width: $screen-xs-max) {
-              font-size: 20px;
               margin-right: 5px;
               margin-left: 5px;
+              font-size: 20px;
             }
             @media(min-width:$screen-sm-min) {
               margin-right: 15px;
               margin-left: 15px;
               font-size: 60px;
             }
-            background-color: rgba($palette-mono0,
-            0.5);
-            border-radius: 10px;
-            padding: 10px;
           }
           &__label {
             @media (max-width: $screen-xs-max) {
@@ -1252,8 +1245,6 @@ table {
         }
       }
     }
-    &__present {}
-    &__place-event {}
   }
   &--points {
     counter-reset: counter;
@@ -1265,22 +1256,22 @@ table {
       padding-left: 1.5em;
       &:before {
         position: absolute;
-        left: 0;
         top: 4px;
+        left: 0;
         display: table-cell;
         margin-right: 0.5em;
-        background-color: $palette-main02;
+        padding-left: 2px;
         width: 30px;
         height: 30px;
-        font-size: 20px;
-        color: $palette-monof;
-        text-align: center;
-        font-weight: normal;
-        padding-left: 2px;
-        vertical-align: middle;
         border-radius: 50%;
+        background-color: $palette-main02;
+        color: $palette-monof;
         content: counter(counter);
         counter-increment: counter;
+        vertical-align: middle;
+        text-align: center;
+        font-weight: normal;
+        font-size: 20px;
       }
       .badge {
         background-color: $palette-main02;
@@ -1305,7 +1296,6 @@ table {
       }
     }
   }
-  &--course-map {}
   &--access {
     &__flow {
       padding-left: 40px;
@@ -1375,9 +1365,9 @@ table {
           font-size: 19px;
         }
         &__excerpt {
-          font-size: 14px;
           margin-top: 5px;
           margin-bottom: 0;
+          font-size: 14px;
         }
       }
     }
@@ -1389,17 +1379,17 @@ table {
     font-size: 30px;
   }
   .p-content {
-    border-bottom: solid 1px $palette-monoe;
     padding-bottom: $line-height-computed;
+    margin-bottom: $line-height-computed;
+    border-bottom: solid 1px $palette-monoe;
     .p-content__title {
       font-size: 26px;
     }
   }
 }
 
-
 .p-content {
-   &__image {
+  &__image {
     float: right;
     margin-bottom: 1em;
     margin-left: 2em;
@@ -1412,14 +1402,14 @@ table {
       display: inline-block;
       margin-right: 0.5em;
       padding: 5px 1em;
-      background:$palette-monoe;
+      background: $palette-monoe;
       &__year {
         display: inline-block;
       }
       &__month-day {
         display: inline-block;
-        padding: 3px;
         margin-left: 2px;
+        padding: 3px;
         background: $palette-monof;
       }
     }
@@ -1437,14 +1427,12 @@ table {
     margin-top: 0;
     font-size: 30px;
   }
-  &__more {
-  }
 }
 
 .p-widget {
   &__title {
-    font-size: 23px;
     color: $palette-main01;
+    font-size: 23px;
   }
 }
 
@@ -1458,26 +1446,26 @@ table {
 
 .u-list {
   &--circle-number {
-    counter-reset: counter;
     list-style: none;
+    counter-reset: counter;
     li {
       position: relative;
       &:before {
-        line-height: 1;
         position: absolute;
         top: 6px;
         left: -1.5em;
         display: block;
-        min-width: 1.1em;
-        min-height: 1.1em;
-        text-align: center;
-        font-size: 0.9em;
         padding-top: 1px;
         padding-left: 1px;
+        min-width: 1.1em;
+        min-height: 1.1em;
+        border: solid 1px $text-color;
         border-radius: 50%;
         content: counter(counter);
         counter-increment: counter;
-        border: solid 1px $text-color;
+        text-align: center;
+        font-size: 0.9em;
+        line-height: 1;
       }
     }
   }
@@ -1520,5 +1508,3 @@ table {
     font-weight: bold;
   }
 }
-
-

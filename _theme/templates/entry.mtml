@@ -55,7 +55,11 @@
               <time class="p-content__meta__time" datetime="<mt:EntryDate format="%Y-%m-%d">">
                 <span class="p-content__meta__time_year"><mt:EntryDate format="%Y">年</span><span class="p-content__meta__time__month-day"><mt:EntryDate format="%b月%e日"></span>
               </time>
-              <span class="p-entry-list__article__meta__categories"><mt:EntryCategories><a class="p-entry-list__article__meta__category" href="<mt:CategoryArchiveLink>"><mt:CategoryLabel encode_html="1"></a></mt:EntryCategories></span>
+              <mt:If tag="EntryPrimaryCategory">
+                <mt:EntryPrimaryCategory>
+                  <span class="p-entry-list__article__meta__category"><a href="<mt:CategoryArchiveLink>"><mt:CategoryLabel encode_html="1"></a></span>
+                </mt:EntryPrimaryCategory>
+              </mt:If>
             </div>
             <h1 class="p-content__title"><mt:EntryTitle encode_html="1"></h1>
             <div class="p-content__body">
