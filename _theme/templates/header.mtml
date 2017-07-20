@@ -4,6 +4,7 @@
   テンプレート名
     header
   引数
+    toppage
 
   戻り値
 
@@ -11,13 +12,10 @@
 
 -->
 </mt:Ignore>
-<mt:WebsiteName setvar="anchor_link_url">
-<mt:If name="index.html" eq="1">
+<mt:WebsiteURL setvar="anchor_link_url">
+<mt:If name="toppage" eq="1">
   <mt:SetVar name="anchor_link_url" value="">
 </mt:If>
-
-index.html <mt:GetVar name="index.html"><br>
-
 <header class="l-header">
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
