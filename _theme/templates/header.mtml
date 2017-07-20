@@ -11,15 +11,19 @@
 
 -->
 </mt:Ignore>
+<mt:WebsiteURL setvar="smooth_url">
+<mt:If name="current_page" eq="index_html">
+  <mt:SetVar name="smooth_url" value="">
+</mt:If>
 <header class="l-header">
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
       <div class="l-header__info">
-        <h1 class="l-header__info__logo"><a href="<mt:WebsiteURL>#home"><img class="img-responsive" src="<mt:WebsiteURL>images/header-logo.png" alt="<mt:WebsiteName>"></a></h1>
+        <h1 class="l-header__info__logo"><a href="<mt:GetVar name="smooth_url">#home"><img class="img-responsive" src="<mt:WebsiteURL>images/header-logo.png" alt="<mt:WebsiteName>"></a></h1>
         <p class="l-header__info__subtitle"><img class="img-responsive" src="<mt:WebsiteURL>images/header-subtitle.png" alt="マイペースあなたが映える溶岩原"></p>
         <ul id="header-info-links" class="l-header__info__links">
-          <li><a href="<mt:WebsiteURL>#faq">よくあるご質問</a></li>
-          <li><a href="<mt:WebsiteURL>#contact">お問い合わせ</a></li>
+          <li><a href="<mt:GetVar name="smooth_url">#faq">よくあるご質問</a></li>
+          <li><a href="<mt:GetVar name="smooth_url">#contact">お問い合わせ</a></li>
           <li><a href="https://www.facebook.com/runningsakurajima/" target="_blank"><span class="fa fa-facebook-official" aria-hidden="true"></span></a></li>
           <li><a href="https://www.instagram.com/runningsakurajima/" target="_blank"><span class="fa fa-instagram" aria-hidden="true"></span></a></li>
         </ul>
@@ -33,17 +37,17 @@
       </div>
       <div id="global-navigation" class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
-          <li><a href="<mt:WebsiteURL>#home">ホーム</a></li>
-          <li><a href="<mt:WebsiteURL>#points">６つのポイント</a></li>
-          <li><a href="<mt:WebsiteURL>#guideline">大会開催要項</a></li>
-          <li><a href="<mt:WebsiteURL>#entry">エントリー</a></li>
-          <li><a href="<mt:WebsiteURL>#course-map">コースマップ</a></li>
-          <li><a href="<mt:WebsiteURL>#access"><span class="hidden-md">会場までの</span>アクセス</a></li>
-          <li><a href="<mt:WebsiteURL>#flow">大会当日の流れ</a></li>
+          <li><a href="<mt:GetVar name="smooth_url">#home">ホーム</a></li>
+          <li><a href="<mt:GetVar name="smooth_url">#points">６つのポイント</a></li>
+          <li><a href="<mt:GetVar name="smooth_url">#guideline">大会開催要項</a></li>
+          <li><a href="<mt:GetVar name="smooth_url">#entry">エントリー</a></li>
+          <li><a href="<mt:GetVar name="smooth_url">#course-map">コースマップ</a></li>
+          <li><a href="<mt:GetVar name="smooth_url">#access"><span class="hidden-md">会場までの</span>アクセス</a></li>
+          <li><a href="<mt:GetVar name="smooth_url">#flow">大会当日の流れ</a></li>
           <li><a href="<mt:WebsiteName>record/">大会記録</a></li>
-          <li><a href="<mt:WebsiteURL>#toppage-news">ニュース</a></li>
-          <li class="hidden-md hidden-lg"><a href="<mt:WebsiteURL>#faq">よくあるご質問</a></li>
-          <li class="hidden-md hidden-lg"><a href="<mt:WebsiteURL>#contact">お問い合わせ</a></li>
+          <li><a href="<mt:GetVar name="smooth_url">#toppage-news">ニュース</a></li>
+          <li class="hidden-md hidden-lg"><a href="<mt:GetVar name="smooth_url">#faq">よくあるご質問</a></li>
+          <li class="hidden-md hidden-lg"><a href="<mt:GetVar name="smooth_url">#contact">お問い合わせ</a></li>
         </ul>
       </div>
     </div>
