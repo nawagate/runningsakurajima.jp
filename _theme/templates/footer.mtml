@@ -11,9 +11,13 @@
 
 -->
 </mt:Ignore>
+<mt:WebsiteURL setvar="smooth_url">
+<mt:If name="current_page" eq="index_html">
+  <mt:SetVar name="smooth_url" value="">
+</mt:If>
 <footer class="l-footer">
   <div id="return-pagetop" class="l-footer__pagetop">
-    <a href="<mt:WebsiteURL>#pagetop"><img src="<mt:WebsiteURL>images/return-pagetop.png" alt="このページのトップに戻る"></a>
+    <a href="<mt:GetVar name="smooth_url">#pagetop"><img src="<mt:WebsiteURL>images/return-pagetop.png" alt="このページのトップに戻る"></a>
   </div>
   <div class="l-footer__info">
     <div class="container">
@@ -21,11 +25,11 @@
         <div class="col-sm-6">
           <p class="l-footer__info__menu__title">メニュー</p>
           <ul class="l-footer__info__menu__list l-footer__info__menu__list--toppage">
-            <li><a href="<mt:WebsiteURL>#home">ホーム</a></li>
+            <li><a href="<mt:GetVar name="smooth_url">#home">ホーム</a></li>
             <mt:Pages>
-              <li><a href="<mt:WebsiteURL>#<mt:PageBasename>"><mt:PageTitle encode_html="1"></a></li>
+              <li><a href="<mt:GetVar name="smooth_url">#<mt:PageBasename>"><mt:PageTitle encode_html="1"></a></li>
             </mt:Pages>
-            <li><a href="<mt:WebsiteURL>#toppage-news">ニュース</a></li>
+            <li><a href="<mt:GetVar name="smooth_url">#toppage-news">ニュース</a></li>
           </ul>
         </div>
         <div class="col-sm-3">
