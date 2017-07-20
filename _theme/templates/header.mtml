@@ -16,7 +16,7 @@
   <mt:SetVar name="smooth_url" value="">
 </mt:If>
 <header class="l-header">
-  <nav class="navbar navbar-default navbar-fixed-top<mt:If name="current_page" eq="index_html"> is-paint</mt:If>">
+  <nav class="navbar navbar-default navbar-fixed-top<mt:If name="current_page" ne="index_html"> is-paint</mt:If>">
     <div class="container">
       <div class="l-header__info">
         <h1 class="l-header__info__logo"><a href="<mt:GetVar name="smooth_url">#home"><img class="img-responsive" src="<mt:WebsiteURL>images/header-logo.png" alt="<mt:WebsiteName>"></a></h1>
