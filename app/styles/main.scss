@@ -600,9 +600,9 @@ $state-warning-bg: $paris-daisy;
 // $panel-warning-text:          $state-warning-text !default;
 // $panel-warning-border:        $state-warning-border !default;
 // $panel-warning-heading-bg:    $state-warning-bg !default;
-// $panel-danger-text:           $state-danger-text !default;
-// $panel-danger-border:         $state-danger-border !default;
-// $panel-danger-heading-bg:     $state-danger-bg !default;
+$panel-danger-text:           $palette-monof;
+$panel-danger-border:         $aka;
+$panel-danger-heading-bg:     $aka;
 // //== Thumbnails
 // //
 // //##
@@ -1163,6 +1163,14 @@ table {
       display: block;
       text-transform: uppercase;
       letter-spacing: 0.1em;
+    }
+  }
+  &--warning {
+    padding-top: 200px;
+    padding-bottom: 100px;
+    .panel {
+      margin: 0 auto;
+      max-width: 600px;
     }
   }
   &--home {

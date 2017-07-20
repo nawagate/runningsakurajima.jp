@@ -40,8 +40,22 @@
   <mt:Include module="common_stylesheet">
   <mt:Include module="common_head_js">
 </head>
-<body id="sitetop">
+<body id="pagetop">
   <mt:Include module="header">
+  <mt:Entries  field:NcEntryWarning="1" lastn="1">
+    <section id="warning" class="p-section p-section--warning">
+      <div class="container">
+        <div class="panel panel-danger">
+          <div class="panel-heading">
+            <h3 class="panel-title"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>&nbsp;<a href="<mt:EntryPermalink>"><mt:EntryTitle encode_html="1"></a></h3>
+          </div>
+          <div class="panel-body">
+            <p><mt:EntryBody encode_html="1"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </mt:Entries>
   <mt:Pages no_folder="1">
     <section id="<mt:PageBasename>" class="p-section p-section--<mt:PageBasename>">
       <div class="container">
@@ -68,7 +82,7 @@
                       <img class="img-responsive" src="<mt:AssetThumbnailURL width="320">" alt="<mt:AssetLabel>">
                     </mt:CustomFieldAsset>
                   <mt:Else>
-                    <img class="img-responsive" src="<mt:WebsiteURL>images/no-image.png" alt="no image">
+                    <img class="img-responsive" src="<mt:WebsiteURL>images/no-image-320.png" alt="no image">
                   </mt:If>
                 </a>
                 <div class="caption">
@@ -79,7 +93,7 @@
             </div>
           </mt:Entries>
         </div>
-        <div class="text-center"><a class="btn btn-lg btn-default" href="<mt:WebsiteURL>news.html"><i class="fa fa-angle-double-right"></i>&nbsp;ニュース一覧を見る</a></div>
+        <div class="text-center"><a class="btn btn-lg btn-primary" href="<mt:WebsiteURL>news.html"><i class="fa fa-angle-double-right"></i>&nbsp;ニュース一覧を見る</a></div>
       </div>
     </section>
   </mt:If>
