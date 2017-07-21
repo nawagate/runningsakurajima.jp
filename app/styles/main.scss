@@ -1153,6 +1153,34 @@ table {
 .p-section {
   padding-bottom: 50px;
   border-bottom: 5px solid $palette-monoe;
+
+  .mt-image-center {
+    margin: 0 auto $line-height-computed !important;
+    text-align: center;
+  }
+  .mt-image-left {
+    float: left !important;
+    margin: 0 $line-height-computed $line-height-computed 0 !important;
+    max-width: 300px;
+  }
+  .mt-image-right {
+    float: right !important;
+    margin: 0 0 $line-height-computed $line-height-computed !important;
+    max-width: 300px;
+  }
+  @media(max-width: $screen-xs-max) {
+    .mt-image-center,
+    .mt-image-left,
+    .mt-image-none,
+    .mt-image-right {
+      display: block !important;
+      float: none !important;
+      margin: 0 auto $line-height-computed !important;
+      // max-width: 100%;
+      // text-align: center;
+    }
+  }
+
   &__title {
     margin-bottom: 20px;
     color: $palette-main01;
@@ -1397,10 +1425,49 @@ table {
 }
 
 .p-content {
+  // >*:first-child {
+  //   margin-top: 0;
+  // }
+  // >*:last-child {
+  //   margin-bottom: 0;
+  // }
+  img {
+    @include img-responsive(inline-block);
+  }
+  .mt-image-center {
+    margin: 0 auto $line-height-computed !important;
+    text-align: center;
+  }
+  .mt-image-left {
+    float: left !important;
+    margin: 0 $line-height-computed $line-height-computed 0 !important;
+    max-width: 360px;
+  }
+  .mt-image-right {
+    float: right !important;
+    margin: 0 0 $line-height-computed $line-height-computed !important;
+    max-width: 360px;
+  }
+  @media(max-width: $screen-xs-max) {
+    .mt-image-center,
+    .mt-image-left,
+    .mt-image-none,
+    .mt-image-right {
+      float: none !important;
+      margin: $line-height-computed auto $line-height-computed 0;
+      max-width: 100%;
+      text-align: left !important;
+    }
+  }
   &__image {
-    float: right;
-    margin-bottom: 1em;
-    margin-left: 2em;
+    @media(max-width: $screen-xs-max) {
+      display: none;
+    }
+    @media(min-width:$screen-sm-min) {
+      float: right;
+      margin-bottom: 1em;
+      margin-left: 2em;
+    }
   }
   &__meta {
     margin-bottom: $line-height-computed / 2;
