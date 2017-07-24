@@ -59,10 +59,12 @@
   <mt:Pages no_folder="1">
     <section id="<mt:PageBasename>" class="p-section p-section--<mt:PageBasename>">
       <div class="container">
-        <h2 class="p-section__title">
-          <mt:PageTitle encode_html="1">
-          <small class="p-section__title__label"><mt:PageBasename separator=" "></small>
-        </h2>
+        <mt:If tag="PageTitle">
+          <h2 class="p-section__title">
+            <mt:PageTitle>
+            <small class="p-section__title__label"><mt:PageBasename separator=" "></small>
+          </h2>
+        </mt:If>
         <mt:PageBody>
         <mt:PageMore>
       </div>
