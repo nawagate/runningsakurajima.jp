@@ -600,9 +600,9 @@ $state-warning-bg: $paris-daisy;
 // $panel-warning-text:          $state-warning-text !default;
 // $panel-warning-border:        $state-warning-border !default;
 // $panel-warning-heading-bg:    $state-warning-bg !default;
-$panel-danger-text:           $palette-monof;
-$panel-danger-border:         $aka;
-$panel-danger-heading-bg:     $aka;
+$panel-danger-text: $palette-monof;
+$panel-danger-border: $aka;
+$panel-danger-heading-bg: $aka;
 // //== Thumbnails
 // //
 // //##
@@ -989,7 +989,7 @@ table {
 }
 
 .panel {
-  .panel-body > * {
+  .panel-body > *:last-child {
     margin-bottom: 0;
   }
 }
@@ -1043,7 +1043,7 @@ table {
   &__circle {
     position: absolute;
     top: 23px;
-    z-index: $zindex-modal;
+    z-index: $zindex-navbar;
     margin-left: -18px;
     width: 36px;
     height: 36px;
@@ -1323,14 +1323,14 @@ table {
     .container {
       max-width: 800px;
     }
-    .btn {
-      @media (max-width: $screen-xs-max) {
-        width: 90%;
-      }
-      @media(min-width:$screen-sm-min) {
-        width: 420px;
-      }
-    }
+    // .btn {
+    //   @media (max-width: $screen-xs-max) {
+    //     width: 90%;
+    //   }
+    //   @media(min-width:$screen-sm-min) {
+    //     // width: 420px;
+    //   }
+    // }
   }
   &--access {
     &__flow {
@@ -1565,12 +1565,48 @@ table {
   &--0 {
     margin: 0 !important;
   }
-  &--banner {
+  &--top {
+    margin-top: $line-height-computed;
+  }
+  &--right {
+    margin-right: $line-height-computed;
+  }
+  &--bottom {
+    margin-bottom: $line-height-computed;
+  }
+  &--left {
+    margin-left: $line-height-computed;
+  }
+  &-variable--top {
     @media (max-width: $screen-xs-max) {
-      margin-bottom: ($grid-gutter-width / 2);
+      margin-top: ($line-height-computed / 2);
     }
     @media(min-width:$screen-sm-min) {
-      margin-bottom: $grid-gutter-width;
+      margin-top: $line-height-computed;
+    }
+  }
+  &-variable--right {
+    @media (max-width: $screen-xs-max) {
+      margin-right: ($line-height-computed / 2);
+    }
+    @media(min-width:$screen-sm-min) {
+      margin-right: $line-height-computed;
+    }
+  }
+  &-variable--bottom {
+    @media (max-width: $screen-xs-max) {
+      margin-bottom: ($line-height-computed / 2);
+    }
+    @media(min-width:$screen-sm-min) {
+      margin-bottom: $line-height-computed;
+    }
+  }
+  &-variable--left {
+    @media (max-width: $screen-xs-max) {
+      margin-left: ($line-height-computed / 2);
+    }
+    @media(min-width:$screen-sm-min) {
+      margin-left: $line-height-computed;
     }
   }
 }

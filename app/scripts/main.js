@@ -10,7 +10,10 @@
     offset: -100
   });
   $('#global-navigation a').smoothScroll({
-    offset: -100
+    offset: -100,
+    beforeScroll: function () {
+      $('.navbar-collapse.collapse.in').collapse('hide');
+    }
   });
   $('a.smooth-scroll').smoothScroll({
     offset: -100
@@ -28,7 +31,7 @@
     $(this).addClass('hidden');
   });
   // panel-toggle
-  $('.panel.panel-toggle .panel-heading').on('click', function() {
+  $('.panel.panel-toggle .panel-heading').on('click', function () {
     // $(this).toggleClass('is-close');
     $(this).next('.panel-body').slideToggle();
   });
@@ -39,15 +42,15 @@
   var $document = $(document);
   var $navbar = $('.l-header .navbar');
   var $points = $('#points').offset();
-  $(window).on('scroll', function() {
-    if ($document.scrollTop() > $points.top ) {
+  $(window).on('scroll', function () {
+    if ($document.scrollTop() > $points.top) {
       $navbar.addClass('is-paint');
     } else {
       $navbar.removeClass('is-paint');
     }
   });
   // このページの先頭に戻る
-  $(window).scroll(function() {
+  $(window).scroll(function () {
     if ($(window).scrollTop() > 100) {
       $('#return-pagetop').fadeIn('slow');
     } else {
