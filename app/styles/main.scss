@@ -1067,42 +1067,56 @@ table {
     position: relative;
     padding: 20px;
     border: 2px solid $gray-lighter;
-    -webkit-border-radius: 8px;
-       -moz-border-radius: 8px;
-            border-radius: 8px;
+    border-radius: 8px;
     background: $palette-monof;
     @media (max-width: $screen-xs-max) {
-      float: right;
+    //   float: right;
       margin-left: 90px;
     }
     @media(min-width:$screen-sm-min) {
       float: left;
-      width: 46%;
+      width: 45%;
     }
     &:before {
       position: absolute;
       top: 26px;
-      right: -15px;
       display: inline-block;
       border-top: 15px solid transparent;
-      border-right: 0 solid $gray-lighter;
       border-bottom: 15px solid transparent;
-      border-left: 15px solid $gray-lighter;
       content: " ";
+      @media (max-width: $screen-xs-max) {
+        left: -15px;
+        border-right: 15px solid $gray-lighter;
+        border-left: 0 solid $gray-lighter;
+      }
+      @media(min-width:$screen-sm-min) {
+        right: -15px;
+        border-right: 0 solid $gray-lighter;
+        border-left: 15px solid $gray-lighter;
+      }
     }
     &:after {
       position: absolute;
       top: 26px;
-      right: -12px;
       display: inline-block;
       border-top: 15px solid transparent;
-      border-right: 0 solid $palette-monof;
       border-bottom: 15px solid transparent;
-      border-left: 15px solid $palette-monof;
       content: " ";
+      @media (max-width: $screen-xs-max) {
+        left: -12px;
+        border-right: 15px solid $palette-monof;
+        border-left: 0 solid $palette-monof;
+      }
+      @media(min-width:$screen-sm-min) {
+        right: -12px;
+        border-right: 0 solid $palette-monof;
+        border-left: 15px solid $palette-monof;
+      }
     }
     &--inverted {
-      float: right;
+      @media(min-width:$screen-sm-min) {
+        float: right;
+      }
       &:before {
         right: auto;
         left: -15px;
@@ -1129,10 +1143,10 @@ table {
     &.noarrow {
       &:after,
       &:before {
-        top: 0;
-        right: 0;
+        // top: 0;
+        // right: 0;
         display: none;
-        border: 0;
+        // border: 0;
       }
     }
   }

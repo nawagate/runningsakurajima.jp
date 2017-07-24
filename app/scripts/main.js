@@ -6,6 +6,9 @@
     offset: 110
   });
   // smoothScroll
+  $('.l-header__info__logo a').smoothScroll({
+    offset: -100
+  });
   $('#header-info-links a').smoothScroll({
     offset: -100
   });
@@ -49,6 +52,26 @@
       $navbar.removeClass('is-paint');
     }
   });
+  // 埋め込みのレスポンシブ対応
+  $('iframe[src^="https://www.youtube.com/embed/"]').wrap('<div class="embed-responsive embed-responsive-16by9"></div>');
+  $('iframe[src^="https://www.youtube.com/embed/"]').addClass('embed-responsive-item');
+  $('iframe[src^="https://www.google.com/maps/"]').wrap('<div class="embed-responsive embed-responsive-16by9"></div>');
+  $('iframe[src^="https://www.google.com/maps/"]').addClass('embed-responsive-item');
+  // tableのレスポンシブ対応
+  $('.table').wrap('<div class="table-responsive"></div>');
+  // matchHeight
+  $('.thumbnails').imagesLoaded(function() {
+    $('.thumbnails .thumbnail').matchHeight();
+  });
+  // shuffleContent
+  function shuffleContent(container) {
+    var content = container.find('> *');
+    var total = content.length;
+    content.each(function() {
+      content.eq(Math.floor(Math.random() * total)).prependTo(container);
+    });
+  }
+  shuffleContent($('.l-footer__ad > .row'));
   // このページの先頭に戻る
   $(window).scroll(function () {
     if ($(window).scrollTop() > 100) {

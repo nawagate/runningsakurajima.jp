@@ -86,7 +86,11 @@
           <div class="row row-xs">
       </mt:AssetsHeader>
       <div class="col-xs-3">
-        <a href="<mt:CustomFieldValue identifier="NcImageLinkUrl">" title="<mt:AssetLabel>" target="_blank"><img class="img-responsive u-margin-variable--bottom" src="<mt:AssetThumbnailURL width="240">" alt="<mt:AssetLabel>"></a>
+        <mt:If tag="CustomFieldValue" identifier="NcImageLinkUrl">
+          <a href="<mt:CustomFieldValue identifier="NcImageLinkUrl">" title="<mt:AssetLabel>" target="_blank"><img class="img-responsive u-margin-variable--bottom" src="<mt:AssetThumbnailURL width="240">" alt="<mt:AssetLabel>"></a>
+        <mt:Else>
+          <img class="img-responsive u-margin-variable--bottom" src="<mt:AssetThumbnailURL width="240">" alt="<mt:AssetLabel>">
+        </mt:If>
       </div>
       <mt:AssetsFooter>
           </div>
