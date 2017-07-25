@@ -63,6 +63,9 @@
   $('.thumbnails').imagesLoaded(function() {
     $('.thumbnails .thumbnail').matchHeight();
   });
+  $('.c-banners').imagesLoaded(function() {
+    $('.c-banners .c-banner').matchHeight();
+  });
   // shuffleContent
   function shuffleContent(container) {
     var content = container.find('> *');
@@ -81,39 +84,3 @@
     }
   });
 })();
-
-
-
-
-
-
-// // common head グローバルナビの高さ調整
-// (function() {
-//   'use strict';
-// })();
-// // 共通
-// (function() {
-//   'use strict';
-//   // パネルをトグル化
-// })();
-// // トップページ
-// (function() {
-//   'use strict';
-//   // ニュースのサムネイルの高さを揃える
-//   if ($(window).width() >= 992) {
-//     // $('#top-news [class^="col-] > a').tile(4);
-//     $('#top-news [class^="col-sm"] > a').tile(4);
-//   }
-//   // スマートフォンの時のグローバルナビゲーションの動き
-//   var $body = $('body');
-//   $('#return-pagetop a').smoothScroll();
-//   $('.navbar-scroll a').smoothScroll({
-//     beforeScroll: function() {
-//       $body.addClass('smooth-scroll-scrolling');
-//       $('.navbar-collapse.collapse.in').collapse('hide');
-//     },
-//     afterScroll: function() {
-//       $body.removeClass('smooth-scroll-scrolling');
-//     }
-//   });
-// })();

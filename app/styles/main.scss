@@ -59,7 +59,7 @@ $brand-danger: $aka;
 // //** Background color for `<body>`.
 // $body-bg:               #fff !default;
 // //** Global text color on `<body>`.
-// $text-color:            $gray-dark !default;
+$text-color:            $palette-mono3;
 // //** Global textual link color.
 $link-color: $brand-primary;
 // //** Link hover color set via `darken()` function.
@@ -147,9 +147,9 @@ $table-border-color: $palette-main01;
 // //
 // //## For each of Bootstrap's buttons, define text, background and border color.
 // $btn-font-weight:                normal !default;
-// $btn-default-color:              #333 !default;
-// $btn-default-bg:                 #fff !default;
-// $btn-default-border:             #ccc !default;
+$btn-default-color:              $text-color;
+$btn-default-bg:                $palette-monof;
+$btn-default-border:             $palette-monoe;
 // $btn-primary-color:              #fff !default;
 // $btn-primary-bg:                 $brand-primary !default;
 // $btn-primary-border:             darken($btn-primary-bg, 5%) !default;
@@ -974,6 +974,14 @@ table {
 /* Component
    ----------------------------------------------------------------- */
 
+.c-banners {
+  .c-banner {
+    display: table-cell;
+    height: 100%;
+    vertical-align: middle;
+  }
+}
+
 .img-responsive {
   margin: auto;
 }
@@ -1405,6 +1413,14 @@ table {
     .container {
       max-width: 800px;
     }
+    .btn {
+      @media (max-width: $screen-xs-max) {
+        width: 90%;
+      }
+      @media(min-width:$screen-sm-min) {
+        width: 300px;
+      }
+    }
   }
   &--toppage-news {
     .thumbnail {
@@ -1419,6 +1435,14 @@ table {
           margin-bottom: 0;
           font-size: 14px;
         }
+      }
+    }
+    .btn {
+      @media (max-width: $screen-xs-max) {
+        width: 90%;
+      }
+      @media(min-width:$screen-sm-min) {
+        width: 300px;
       }
     }
   }
