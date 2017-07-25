@@ -17,7 +17,7 @@
 </mt:If>
 <footer class="l-footer">
   <div id="return-pagetop" class="l-footer__pagetop">
-    <a href="<mt:GetVar name="smooth_url">#pagetop"><img src="<mt:WebsiteURL>images/return-pagetop.png" alt="このページのトップに戻る"></a>
+    <a href="<mt:GetVar name="smooth_url">#pagetop"><img src="<mt:WebsiteURL>images/return-pagetop.png" alt="このページのトップに戻る" width="60" height="60"></a>
   </div>
   <div class="l-footer__info">
     <div class="container">
@@ -85,11 +85,11 @@
         <aside class="l-footer__ad">
           <div class="row row-xs c-banners">
       </mt:AssetsHeader>
-      <div class="col-xs-3 c-banner">
+      <div class="col-xs-3">
         <mt:If tag="CustomFieldValue" identifier="NcImageLinkUrl">
-          <a href="<mt:CustomFieldValue identifier="NcImageLinkUrl">" title="<mt:AssetLabel>" target="_blank"><img class="img-responsive u-margin-variable--bottom" src="<mt:AssetThumbnailURL width="240">" alt="<mt:AssetLabel>"></a>
+          <a class="c-banner" href="<mt:CustomFieldValue identifier="NcImageLinkUrl">" title="<mt:AssetLabel>" target="_blank"><img class="img-responsive u-margin-variable--bottom" src="<mt:AssetThumbnailURL width="240">" alt="<mt:AssetLabel>"></a>
         <mt:Else>
-          <img class="img-responsive u-margin-variable--bottom" src="<mt:AssetThumbnailURL width="240">" alt="<mt:AssetLabel>">
+          <div class="c-banner"><img class="img-responsive u-margin-variable--bottom" src="<mt:AssetThumbnailURL width="240">" alt="<mt:AssetLabel>"></div>
         </mt:If>
       </div>
       <mt:AssetsFooter>
@@ -142,11 +142,11 @@
     </aside>
     <aside class="l-footer__links">
       <div class="row c-banners">
-        <div class="col-xs-6 col-sm-offset-3 col-sm-3 c-banner">
-          <a href="http://www.sakurajima-kinkowan-geo.jp/" target="_blank"><img class="img-responsive" src="<mt:WebsiteURL>images/banner-sakurajima-kinkowan-geo.png" alt="桜島・錦江湾ジオパーク"></a>
+        <div class="col-xs-6 col-sm-offset-3 col-sm-3">
+          <a class="c-banner" href="http://www.sakurajima-kinkowan-geo.jp/" target="_blank"><img class="img-responsive" src="<mt:WebsiteURL>images/banner-sakurajima-kinkowan-geo.png" alt="桜島・錦江湾ジオパーク" width="150" height="150"></a>
         </div>
-        <div class="col-xs-6 col-sm-3 c-banner">
-          <a href="http://www.meijiishin150countdown.com/" target="_blank"><img class="img-responsive" src="<mt:WebsiteURL>images/banner-meijiishin150countdown.png" alt="明治維新150周年 維新のふるさと鹿児島市"></a>
+        <div class="col-xs-6 col-sm-3">
+          <a class="c-banner" href="http://www.meijiishin150countdown.com/" target="_blank"><img class="img-responsive" src="<mt:WebsiteURL>images/banner-meijiishin150countdown.png" alt="明治維新150周年 維新のふるさと鹿児島市" width="210" height="151"></a>
         </div>
       </div>
     </aside>

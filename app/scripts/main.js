@@ -38,20 +38,22 @@
     // $(this).toggleClass('is-close');
     $(this).next('.panel-body').slideToggle();
   });
-  if ($(window).width() < 768) {
+  var $document = $(document);
+  if ($document.width() < 768) {
     $('.panel.panel-toggle .panel-heading').trigger('click');
   }
   // navbar
-  var $document = $(document);
   var $navbar = $('.l-header .navbar');
   var $points = $('#points').offset();
-  $(window).on('scroll', function () {
-    if ($document.scrollTop() > $points.top) {
-      $navbar.addClass('is-paint');
-    } else {
-      $navbar.removeClass('is-paint');
-    }
-  });
+  if (typeof $points !== 'undefined') {
+    $document.on('scroll', function () {
+      if ($document.scrollTop() > $points.top) {
+        $navbar.addClass('is-paint');
+      } else {
+        $navbar.removeClass('is-paint');
+      }
+    });
+  }
   // 埋め込みのレスポンシブ対応
   $('iframe[src^="https://www.youtube.com/embed/"]').wrap('<div class="embed-responsive embed-responsive-16by9"></div>');
   $('iframe[src^="https://www.youtube.com/embed/"]').addClass('embed-responsive-item');
@@ -76,8 +78,8 @@
   }
   shuffleContent($('.l-footer__ad > .row'));
   // このページの先頭に戻る
-  $(window).scroll(function () {
-    if ($(window).scrollTop() > 100) {
+  $document.scroll(function () {
+    if ($document.scrollTop() > 100) {
       $('#return-pagetop').fadeIn('slow');
     } else {
       $('#return-pagetop').fadeOut('slow');

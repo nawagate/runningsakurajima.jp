@@ -977,7 +977,6 @@ table {
 .c-banners {
   .c-banner {
     display: table-cell;
-    height: 100%;
     vertical-align: middle;
   }
 }
@@ -1151,10 +1150,7 @@ table {
     &.noarrow {
       &:after,
       &:before {
-        // top: 0;
-        // right: 0;
         display: none;
-        // border: 0;
       }
     }
   }
@@ -1198,8 +1194,6 @@ table {
       display: block !important;
       float: none !important;
       margin: 0 auto $line-height-computed !important;
-      // max-width: 100%;
-      // text-align: center;
     }
   }
 
@@ -1264,7 +1258,7 @@ table {
         border-radius: 10px;
         background-color: rgba($palette-mono0, 0.5);
         color: $palette-monof;
-        font-weight: 100;
+        font-weight: 300;
         font-family: "Lato", sans-serif;
         line-height: 1;
         @media (max-width: $screen-xs-max) {
@@ -1345,14 +1339,6 @@ table {
     .container {
       max-width: 800px;
     }
-    // .btn {
-    //   @media (max-width: $screen-xs-max) {
-    //     width: 90%;
-    //   }
-    //   @media(min-width:$screen-sm-min) {
-    //     // width: 420px;
-    //   }
-    // }
   }
   &--access {
     &__flow {
@@ -1463,12 +1449,6 @@ table {
 }
 
 .p-content {
-  // >*:first-child {
-  //   margin-top: 0;
-  // }
-  // >*:last-child {
-  //   margin-bottom: 0;
-  // }
   img {
     @include img-responsive(inline-block);
   }

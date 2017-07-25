@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>runningsakurajima jp</title>
 
-  <link rel="shortcut icon" href="http://www.runningsakurajima.jp/favicon.ico">
+  <link rel="shortcut icon" href="./favicon.ico">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
   <!-- Place favicon.ico in the root directory -->
@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="styles/main.css">
   <!-- endbuild -->
 
-  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet" type="text/css">
 </head>
 
 <body id="pagetop">
@@ -29,8 +29,8 @@
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="l-header__info">
-          <h1 class="l-header__info__logo"><a href="#home"><img class="img-responsive" src="./images/header-logo.png" alt="第38回 ランニング桜島大会"></a></h1>
-          <p class="l-header__info__subtitle"><img class="img-responsive" src="./images/header-subtitle.png" alt="マイペースあなたが映える溶岩原"></p>
+          <h1 class="l-header__info__logo"><a href="#home"><img src="./images/header-logo.png" alt="第38回 ランニング桜島大会" width="220" height="40" class="img-responsive"></a></h1>
+          <p class="l-header__info__subtitle"><img src="./images/header-subtitle.png" alt="マイペースあなたが映える溶岩原" width="160" height="18" class="img-responsive"></p>
           <ul id="header-info-links" class="l-header__info__links">
             <li><a href="#faq">よくあるご質問</a></li>
             <li><a href="#contact">お問い合わせ</a></li>
@@ -39,11 +39,11 @@
           </ul>
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#global-navigation" aria-expanded="false"
             aria-controls="global-navigation">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
         </div>
         <div id="global-navigation" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
@@ -54,7 +54,7 @@
             <li><a href="#course-map">コースマップ</a></li>
             <li><a href="#access"><span class="hidden-md">会場までの</span>アクセス</a></li>
             <li><a href="#flow">大会当日の流れ</a></li>
-            <li><a href="record/">大会記録</a></li>
+            <li><a href="./record/">大会記録</a></li>
             <li><a href="#toppage-news">ニュース</a></li>
             <li class="hidden-md hidden-lg"><a href="#faq">よくあるご質問</a></li>
             <li class="hidden-md hidden-lg"><a href="#contact">お問い合わせ</a></li>
@@ -63,48 +63,21 @@
       </div>
     </nav>
   </header>
-  <section id="warning" class="p-section p-section--warning">
-    <div class="container">
-      <div class="panel panel-danger">
-        <div class="panel-heading">
-          <h3 class="panel-title"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>&nbsp;雷雨による中止のお知らせ</h3>
-        </div>
-        <div class="panel-body">
-          <p>本日行なわれる予定だったランニング桜島大会は、雷雨のため中止となりました。</p>
-        </div>
-      </div>
-    </div>
-  </section>
+
   <section id="home" class="p-section p-section--home">
     <div class="container">
-      <div class="p-section--home__entry"><a class="smooth-scroll" href="#entry"><img src="./images/home-entry.png" alt="申込締切 8.31（木）消印有効"></a></div>
-      <h2 class="p-section--home__symbol"><img class="img-responsive" src="./images/home-symbol.png" alt="第38回 ランニング桜島 2017.12.3 SUN 雨天決行"></h2>
+      <div class="p-section--home__entry"><a class="smooth-scroll" href="#entry"><img src="./images/home-entry.png" alt="申込締切 8.31（木）消印有効" width="150" height="150"></a></div>
+      <h2 class="p-section--home__symbol"><img src="./images/home-symbol.png" alt="第38回 ランニング桜島 2017.12.3 SUN 雨天決行" width="540" height="400" class="img-responsive"></h2>
       <p id="countdown-message" class="p-section--home__countdown__message">ランニング桜島開催まであと</p>
       <div id="countdown-timer" class="p-section--home__countdown__timer"></div>
-      <p class="p-section--home__present"><img class="img-responsive" src="./images/home-present.png" alt="オーストラリア・ゴールドコーストマラソンに抽選でペア1組をご招待！"></p>
-      <p class="p-section--home__place-event"><img class="img-responsive" src="./images/home-place-event.png" alt="会場：桜島多目的広場（鹿児島市桜島横山町） 種目：ハーフマラソン・10km・5km"></p>
-      <div id="countdown-timer2" class="p-section--home__countdown__timer">
-        <div class="p-section--home__countdown__timer__frame">
-          <div class="p-section--home__countdown__timer__frame__number">131</div>
-          <div class="p-section--home__countdown__timer__frame__label">Days</div>
-        </div>
-        <div class="p-section--home__countdown__timer__frame">
-          <div class="p-section--home__countdown__timer__frame__number">18</div>
-          <div class="p-section--home__countdown__timer__frame__label">Hours</div>
-        </div>
-        <div class="p-section--home__countdown__timer__frame">
-          <div class="p-section--home__countdown__timer__frame__number">00</div>
-          <div class="p-section--home__countdown__timer__frame__label">Minutes</div>
-        </div>
-        <div class="p-section--home__countdown__timer__frame">
-          <div class="p-section--home__countdown__timer__frame__number">09</div>
-          <div class="p-section--home__countdown__timer__frame__label">Seconds</div>
-        </div>
-      </div>
+      <p class="p-section--home__present"><img src="./images/home-present.png" alt="オーストラリア・ゴールドコーストマラソンに抽選でペア1組をご招待！" width="760" height="26" class="img-responsive"></p>
+      <p class="p-section--home__place-event"><img src="./images/home-place-event.png" alt="会場：桜島多目的広場（鹿児島市桜島横山町） 種目：ハーフマラソン・10km・5km" width="860" height="50" class="img-responsive"></p>
+
+
     </div>
   </section>
   <section id="points" class="p-section p-section--points">
-    <div class="container image-top">
+    <div class="container">
       <h2 class="p-section__title">
         ランニング桜島<br class="visible-xs-inline">６つのポイント
         <small class="p-section__title__label">points</small>
@@ -121,11 +94,13 @@
       <p><span class="bg-warning">九州外</span>にお住まいで、今回ランニング桜島を走っていただいた方は、抽選なしで、「鹿児島マラソン2018（マラソンの部）/3月4日（日）開催」に出走することができます！（参加料は別途必要）</p>
       <p>ご希望の方は、インターネットまたは専用振替払込用紙の希望欄にチェックをお願いします。</p>
       <h3 class="u-heading--big p-section--points__title">参加者全員に温泉無料入浴券をプレゼント</h3>
-      <p><img class="img-rounded mt-image-right" src="./images/toppage-points-ashiyu.jpg" alt="参加者全員に温泉無料入浴券をプレゼント" style="display: inline-block; float: right;">全国的にも有名な「桜島マグマ温泉」（会場から徒歩5分）などが利用できる温泉入浴券を差し上げます。地下1,000ｍから湧き出る源泉湯は、ランナーに抜群の効力を発揮します。</p>
+      <p><img src="./images/toppage-points-ashiyu.jpg" alt="参加者全員に温泉無料入浴券をプレゼント" width="300" height="200" class="img-rounded mt-image-right"
+          style="display:inline-block;float:right">全国的にも有名な「桜島マグマ温泉」（会場から徒歩5分）などが利用できる温泉入浴券を差し上げます。地下1,000ｍから湧き出る源泉湯は、ランナーに抜群の効力を発揮します。</p>
       <p>また、会場近くの溶岩なぎさ公園に、屋外では日本最大級の足湯（全長約100ｍ）もあり、鉄分豊富なお湯で身体の芯から温まれば、走った後の筋肉や関節の疲れも吹き飛び、リフレッシュできることでしょう。</p>
       <div class="clearfix"></div>
       <h3 class="u-heading--big p-section--points__title">桜島フェリーでアクセスもラクラク</h3>
-      <p><img class="img-rounded mt-image-right" src="./images/toppage-points-ferry.jpg" alt="桜島フェリーでアクセスもラクラク" style="margin-left: 2em;">        大会メイン会場は、JR鹿児島駅より徒歩8分の桜島桟橋（桜島フェリー発着地）からフェリーで15分、桜島港下船後、徒歩9分の「桜島多目的広場」。
+      <p><img src="./images/toppage-points-ferry.jpg" alt="桜島フェリーでアクセスもラクラク" width="300" height="200" class="img-rounded mt-image-right"
+          style="margin-left:2em"> 大会メイン会場は、JR鹿児島駅より徒歩8分の桜島桟橋（桜島フェリー発着地）からフェリーで15分、桜島港下船後、徒歩9分の「桜島多目的広場」。
       </p>
       <p>日中は15分おきにフェリーが運航していますので、鹿児島市街地からのアクセスも抜群に便利です。大会前日や当日に、鹿児島名物の黒豚や薩摩揚げ、焼酎などを味わってみてはいかが？</p>
       <div class="clearfix"></div>
@@ -133,7 +108,8 @@
       <p>号砲からフィニッシュするまでの記録「グロスタイム」に加え、スタートラインを通過してからフィニッシュするまでの記録「ネットタイム」も参考記録として記録証に併記します。（ハーフと10kmのみ）</p>
       <h3 class="u-heading--big">桜島観光にご利用ください</h3>
       <div class="row">
-        <div class="col-sm-6"><img class="img-rounded img-responsive" src="./images/toppage-points-ilandview.jpg" alt="サクラジマ アイランドビュー">
+        <div class="col-sm-6"><img src="./images/toppage-points-ilandview.jpg"
+            alt="サクラジマ アイランドビュー" width="400" height="200" class="img-rounded img-responsive">
           <h4 class="u-heading--medium">サクラジマ アイランドビュー</h4>
           <p>桜島港を発着し、鹿児島市街地を一望できる湯之平展望所や「叫びの肖像」がある赤水展望広場など約１時間かけて巡ります。</p>
           <ul>
@@ -145,7 +121,7 @@
             <br>099-257-2117（鹿児島市交通局）
           </p>
         </div>
-        <div class="col-sm-6"><img class="img-rounded img-responsive" src="./images/toppage-points-crews.jpg" alt="よりみちクルーズ船">
+        <div class="col-sm-6"><img src="./images/toppage-points-crews.jpg" alt="よりみちクルーズ船" width="400" height="200" class="img-rounded img-responsive">
           <h4 class="u-heading--medium">よりみちクルーズ船</h4>
           <p>通常の運航ルートから少しよりみちをして、桜島と錦江湾の魅力を海上から身近に楽しむことができる桜島までの片道約50分間のプチクルーズです。</p>
           <ul>
@@ -156,10 +132,11 @@
             <br>099-293-2525（桜島フェリー） </p>
         </div>
       </div>
+
     </div>
   </section>
   <section id="guideline" class="p-section p-section--guideline">
-    <div class="container image-top">
+    <div class="container">
       <h2 class="p-section__title">
         大会開催要項
         <small class="p-section__title__label">guideline</small>
@@ -394,10 +371,11 @@
       <h3 class="u-heading--big">手荷物預かりサービスについて</h3>
       <p>ヤマト運輸株式会社による、手荷物預かりサービスを実施します。
         <br>料金&nbsp;1箱500円　※サイズ&nbsp;430mm✕350mm✕310mm</p>
+
     </div>
   </section>
   <section id="entry" class="p-section p-section--entry">
-    <div class="container image-top">
+    <div class="container">
       <h2 class="p-section__title">
         エントリー
         <small class="p-section__title__label">entry</small>
@@ -413,18 +391,18 @@
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <h4 class="modal-title">申込規約・誓約</h4>
+              <h3 class="modal-title">申込規約・誓約</h3>
             </div>
             <div class="modal-body">
               <p>※参加者は、下記事項に必ず同意・誓約の上、お申し込みください。</p>
-              <h5 class="u-heading--big">（申込規約）</h5>
+              <h4 class="u-heading--small">（申込規約）</h4>
               <ol>
                 <li>申込後の種目変更、キャンセルはできません。また、過剰入金・重複入金の返金はいたしません。定員を超える申し込みがあった場合、入金期限内に参加料の支払いが完了していても、入金日によっては申し込みが無効となる場合があります。その場合、主催者が定める方法により返金されます。</li>
                 <li>地震・風水害・降雪・事件・事故・疫病・自然災害等による開催縮小・中止、参加料返納の有無・額・通知方法等については、その都度主催者が判断し、決定します。</li>
                 <li>大会申込者の個人情報の取り扱いは、別途記載する主催者の規約に則ります。</li>
                 <li>上記の申込規約の他、主催者が別途定める大会規約に則ります。（齟齬がある場合は大会規約を優先します。）</li>
               </ol>
-              <h5 class="u-heading--big">（誓約）</h5>
+              <h4 class="u-heading--small">（誓約）</h4>
               <ol>
                 <li>私は心疾患・疾病等なく、健康に留意し、十分なトレーニングをして大会に臨みます。傷病、事故、紛失等に対し、自己の責任において大会に参加します。</li>
                 <li>私は、大会開催中に主催者より競技続行に支障があると判断された場合、主催者の競技中止の指示に直ちに従います。また、その他、主催者の安全管理・大会運営上の指示に従います。</li>
@@ -463,7 +441,7 @@
       <h3 class="u-heading--big">（Ａ）RUNNET（インターネットエントリー）</h3>
       <div class="panel panel-danger">
         <div class="panel-heading">
-          <h3 class="panel-title">申込締切日</h3>
+          <h4 class="panel-title">申込締切日</h4>
         </div>
         <div class="panel-body">
           <p>平成29年8月31日（木）</p>
@@ -481,18 +459,18 @@
       <h3 class="u-heading--big">（Ｂ）専用振替払込用紙</h3>
       <div class="panel panel-danger">
         <div class="panel-heading">
-          <h3 class="panel-title">申込締切日</h3>
+          <h4 class="panel-title">申込締切日</h4>
         </div>
         <div class="panel-body">
           <p>平成29年8月31日（木） 消印有効</p>
         </div>
       </div>
-      <p>パンフレットに付いている専用振替払込用紙（コピー不可）に必要事項をご記入の上、参加料を添えて、ゆうちょ銀行または郵便局窓口でお申し込みください。
+      <p>大会パンフレットに付いている専用振替払込用紙（コピー不可）に必要事項をご記入の上、参加料を添えて、ゆうちょ銀行または郵便局窓口でお申し込みください。
         <br>確認用にコピーを大会まで保存されることをおすすめします。</p>
       <p>※払込手数料は130円（申込者負担）となります。</p>
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h3 class="panel-title">専用振替払込用紙ご請求先</h3>
+          <h4 class="panel-title">専用振替払込用紙ご請求先</h4>
         </div>
         <div class="panel-body">
           <p><strong class="u-text--bold">ランニング桜島大会パンフレット発送センター</strong><br> 〒152-8532
@@ -501,6 +479,7 @@
             <span class="u-text-bold">03-3714-7924</span> （平日10:00～17:00╱土・日・祝日は休業）</p>
         </div>
       </div>
+
     </div>
   </section>
   <section id="course-map" class="p-section p-section--course-map">
@@ -509,11 +488,16 @@
         コースマップ
         <small class="p-section__title__label">course-map</small>
       </h2>
-      <div><img class="img-responsive u-margin-variable--bottom" src="./images/course-map-course-map.png" alt="コースマップ"></div>
+      <div><img src="./images/course-map-course-map.png"
+          alt="コースマップ" width="1140" height="465" class="img-responsive u-margin-variable--bottom"></div>
       <div class="row">
-        <div class="col-xs-12 col-sm-6"><img class="img-responsive u-margin-variable--bottom" src="./images/course-map-annai.png" alt="開会式・スタート地点案内図"></div>
-        <div class="col-xs-12 col-sm-6"><img class="img-responsive u-margin-variable--bottom" src="./images/course-map-koteizu.png" alt="コース高低図"></div>
+        <div class="col-xs-12 col-sm-6"><img src="./images/course-map-annai.png"
+            alt="開会式・スタート地点案内図" width="555" height="530" class="img-responsive u-margin-variable--bottom"></div>
+        <div class="col-xs-12 col-sm-6"><img src="./images/course-map-koteizu.png"
+            alt="コース高低図" width="555" height="335" class="img-responsive u-margin-variable--bottom"></div>
       </div>
+
+
     </div>
   </section>
   <section id="access" class="p-section p-section--access">
@@ -559,6 +543,7 @@
           <p>以降「鹿児島中央駅からお越しの方」を参考にお越しください。</p>
         </div>
       </div>
+
     </div>
   </section>
   <section id="flow" class="p-section p-section--flow">
@@ -633,7 +618,7 @@
         </li>
         <li>
           <div class="c-timeline__circle"></div>
-          <div class="c-timeline__panel c-timeline__panel--inverted">
+          <div class="c-timeline__panel">
             <h3 class="c-timeline__panel__heading">ハーフマラソン スタート</h3>
             <div class="c-timeline__panel__body">
               <p>ハーフマラソンのスタート地点はＡコープ前の通路になります。</p>
@@ -642,7 +627,7 @@
         </li>
         <li>
           <div class="c-timeline__circle"></div>
-          <div class="c-timeline__panel">
+          <div class="c-timeline__panel c-timeline__panel--inverted">
             <h3 class="c-timeline__panel__heading">５ｋｍ スタート</h3>
             <div class="c-timeline__panel__body">
               <p>５ｋｍのスタート地点は第１溶岩グランド前の通路になります。</p>
@@ -654,7 +639,7 @@
         </li>
         <li>
           <div class="c-timeline__circle"></div>
-          <div class="c-timeline__panel c-timeline__panel--inverted">
+          <div class="c-timeline__panel">
             <h3 class="c-timeline__panel__heading">１０ｋｍ スタート</h3>
             <div class="c-timeline__panel__body">
               <p>１０ｋｍのスタート地点はＡコープ前の通路になります。</p>
@@ -666,7 +651,7 @@
         </li>
         <li>
           <div class="c-timeline__circle"></div>
-          <div class="c-timeline__panel">
+          <div class="c-timeline__panel c-timeline__panel--inverted">
             <h3 class="c-timeline__panel__heading">ランナーズチップの返却</h3>
             <div class="c-timeline__panel__body">
               <p>ランナーズチップを所定の場所に返却してください。</p>
@@ -709,6 +694,7 @@
           </div>
         </li>
       </ul>
+
     </div>
   </section>
   <section id="faq" class="p-section p-section--faq">
@@ -722,7 +708,7 @@
         <li><a class="smooth-scroll" href="#faq-heading01">大会参加申込みについて</a></li>
         <li><a class="smooth-scroll" href="#faq-heading02">アクセスについて</a></li>
         <li><a class="smooth-scroll" href="#faq-heading03">大会当日・コースについて</a></li>
-        <!--<li><a href="#faq-heading04">その他</a></li>-->
+
       </ul>
       <h3 id="faq-heading01" class="u-heading--big">大会参加申込みについて</h3>
       <div class="panel panel-default panel-toggle">
@@ -830,11 +816,7 @@
         <div class="panel-heading">完走証は当日もらえますか？</div>
         <div class="panel-body">完走者には、当日完走証をお渡しします。 </div>
       </div>
-      <!--<h3 id="faq-heading04">その他</h3>
-        <div class="panel panel-default panel-toggle">
-          <div class="panel-heading">ボランティアをやりたいのですが、どうすればいいですか？</div>
-          <div class="panel-body">こちらの「<a href="http://www.city.kagoshima.lg.jp/_1010/shimin/5kyouiku/5-4sport/info/_24201.html" target="_blank">鹿児島市ホームページ ｜第36回ランニング桜島大会のボランティアスタッフ募集</a>」のページをご覧ください。 </div>
-        </div>-->
+
     </div>
   </section>
   <section id="contact" class="p-section p-section--contact">
@@ -848,7 +830,7 @@
         <br>〒892-8677
         <br>鹿児島県鹿児島市山下町11-1（鹿児島市観光交流局スポーツ課内）
         <br>TEL：<span class="u-text--big u-text-bold">099-803-9621</span> （平日8:30～17:15╱土・日・祝日は休業）</p>
-      <h3 class="u-heading--big">募集パンフレット請求お問い合わせ先</h3>
+      <h3 class="u-heading--big">大会パンフレット請求お問い合わせ先</h3>
       <p>パンフレットが必要な方は、氏名・住所・希望部数を明記した返信用封筒(切手貼付)を同封の上、下記までご請求ください。後日パンフレット発送センターからお送りします。
         <br>切手料金は請求部数によって異なりますのでお問い合わせください。</p>
       <p><strong class="u-text--big">ランニング桜島大会パンフレット発送センター</strong>
@@ -856,7 +838,8 @@
         <br>東京都目黒区原町1-31-9
         <br>TEL：<span class="u-text--big u-text-bold">03-3714-7924</span> （平日10:00～17:00╱土・日・祝日は休業）</p>
       <p>パンフレットのＰＤＦを配布しております。下記のリンクよりダウンロードしてください。</p>
-      <div><a class="btn btn-primary" href="./download/pamphlet-2017.pdf" role="button">募集パンフレット（ＰＤＦ）&nbsp;<span class="fa fa-download" aria-hidden="true"></span></a></div>
+      <div><a class="btn btn-primary" href="./downloads/pamphlet-2017.pdf" role="button">大会パンフレット（ＰＤＦ）&nbsp;<span class="fa fa-download" aria-hidden="true"></span></a></div>
+
     </div>
   </section>
   <section id="toppage-news" class="p-section p-section--toppage-news">
@@ -865,55 +848,57 @@
       <div class="row thumbnails">
         <div class="col-sm-6 col-md-3">
           <div class="thumbnail">
-            <a href="http://www.runningsakurajima.jp/2016/12/37.html">
-<img class="img-responsive" src="http://www.runningsakurajima.jp/images/no-image-320.png" alt="no image">
-</a>
+            <a href="./2016/12/37.html">
+                                      <img src="./images/no-image-320.png" alt="no image" width="320" height="213" class="img-responsive">
+                                  </a>
             <div class="caption">
-              <h3 class="caption__title"><a href="http://www.runningsakurajima.jp/2016/12/37.html">第37回大会は無事終了しました。</a></h3>
+              <h3 class="caption__title"><a href="./2016/12/37.html">第37回大会は無事終了しました。</a></h3>
               <p class="caption__excerpt">皆様のおかげをもちまして、第37回大会も無事終了することができました。 選手の皆...</p>
             </div>
           </div>
         </div>
         <div class="col-sm-6 col-md-3">
           <div class="thumbnail">
-            <a href="http://www.runningsakurajima.jp/2016/10/post-33.html">
-<img class="img-responsive" src="http://www.runningsakurajima.jp/.assets/thumbnail/DSC_0256-320wi.jpg" alt="DSC_0256.jpg">
-</a>
+            <a href="./2016/10/post-33.html">
+                                                            <img class="img-responsive" src="./.assets/thumbnail/DSC_0256-320wi.jpg" alt="DSC_0256.jpg">
+                                                      </a>
             <div class="caption">
-              <h3 class="caption__title"><a href="http://www.runningsakurajima.jp/2016/10/post-33.html">ボランティアスタッフの募集は終了しました。</a></h3>
+              <h3 class="caption__title"><a href="./2016/10/post-33.html">ボランティアスタッフの募集は終了しました。</a></h3>
               <p class="caption__excerpt">「第３７回ランニング桜島大会」ボランティアスタッフの募集は終了しました。 たくさ...</p>
             </div>
           </div>
         </div>
         <div class="col-sm-6 col-md-3">
           <div class="thumbnail">
-            <a href="http://www.runningsakurajima.jp/2016/10/post-32.html">
-<img class="img-responsive" src="http://www.runningsakurajima.jp/.assets/thumbnail/DSC_0302-320wi.jpg" alt="DSC_0302.jpg">
-</a>
+            <a href="./2016/10/post-32.html">
+                                                            <img class="img-responsive" src="./.assets/thumbnail/DSC_0302-320wi.jpg" alt="DSC_0302.jpg">
+                                                      </a>
             <div class="caption">
-              <h3 class="caption__title"><a href="http://www.runningsakurajima.jp/2016/10/post-32.html">エントリーは終了いたしました。</a></h3>
+              <h3 class="caption__title"><a href="./2016/10/post-32.html">エントリーは終了いたしました。</a></h3>
               <p class="caption__excerpt">第37回ランニング桜島へのエントリーを終了いたしました。 たくさんのご応募ありが...</p>
             </div>
           </div>
         </div>
         <div class="col-sm-6 col-md-3">
           <div class="thumbnail">
-            <a href="http://www.runningsakurajima.jp/2016/08/post-31.html">
-<img class="img-responsive" src="http://www.runningsakurajima.jp/.assets/thumbnail/DSC_0302-320wi.jpg" alt="DSC_0302.jpg">
-</a>
+            <a href="./2016/08/post-31.html">
+                                                            <img class="img-responsive" src="./.assets/thumbnail/DSC_0302-320wi.jpg" alt="DSC_0302.jpg">
+                                                      </a>
             <div class="caption">
-              <h3 class="caption__title"><a href="http://www.runningsakurajima.jp/2016/08/post-31.html">エントリーの期限を延長いたしました。</a></h3>
+              <h3 class="caption__title"><a href="./2016/08/post-31.html">エントリーの期限を延長いたしました。</a></h3>
               <p class="caption__excerpt">第37回ランニング桜島へのエントリーの期限を9月9日（金）に延長いたしました。</p>
             </div>
           </div>
         </div>
-        <div class="text-center"><a class="btn btn-primary" href="http://www.runningsakurajima.jp/news.html"><i class="fa fa-angle-double-right"></i>&nbsp;ニュース一覧を見る</a></div>
       </div>
+      <div class="text-center"><a class="btn btn-primary" href="./news.html"><i class="fa fa-angle-double-right"></i>&nbsp;ニュース一覧を見る</a></div>
     </div>
   </section>
+
+
   <footer class="l-footer">
     <div id="return-pagetop" class="l-footer__pagetop">
-      <a href="./#pagetop"><img src="./images/return-pagetop.png" alt="このページのトップに戻る"></a>
+      <a href="#pagetop"><img src="./images/return-pagetop.png" alt="このページのトップに戻る" width="60" height="60"></a>
     </div>
     <div class="l-footer__info">
       <div class="container">
@@ -921,17 +906,16 @@
           <div class="col-sm-6">
             <p class="l-footer__info__menu__title">メニュー</p>
             <ul class="l-footer__info__menu__list l-footer__info__menu__list--toppage">
-              <li><a href="./#home">ホーム</a></li>
-              <li><a href="./#points">５つのポイント</a></li>
-              <li><a href="./#guideline">大会開催要項</a></li>
-              <li><a href="./#entry">エントリー</a></li>
-              <li><a href="./#course-map">コースマップ</a></li>
-              <li><a href="./#access">会場までのアクセス</a></li>
-              <li><a href="./#flow">大会当日の流れ</a></li>
-              <li><a href="./#faq">よくあるご質問</a></li>
-              <li><a href="./#contact">お問い合わせ</a></li>
-              <li><a href="./record/">大会記録</a></li>
-              <li><a href="./#toppage-news">ニュース</a></li>
+              <li><a href="#home">ホーム</a></li>
+              <li><a href="#points">６つのポイント</a></li>
+              <li><a href="#guideline">大会開催要項</a></li>
+              <li><a href="#entry">エントリー</a></li>
+              <li><a href="#course-map">コースマップ</a></li>
+              <li><a href="#access">会場までのアクセス</a></li>
+              <li><a href="#flow">大会当日の流れ</a></li>
+              <li><a href="#faq">よくあるご質問</a></li>
+              <li><a href="#contact">お問い合わせ</a></li>
+              <li><a href="#index">大会記録（2016年）</a></li>
             </ul>
           </div>
           <div class="col-sm-3">
@@ -964,8 +948,8 @@
             </address>
           </div>
           <div class="col-sm-6 l-footer__info__pamphlet">
-            <p>募集パンフレットをＰＤＦにてご覧いただけます。</p>
-            <div><a class="btn btn-default" href="./download/pamphlet-2017.pdf" role="button">募集パンフレット（ＰＤＦ）&nbsp;<span class="fa fa-download" aria-hidden="true"></span></a></div>
+            <p>大会パンフレットをＰＤＦにてご覧いただけます。</p>
+            <div><a class="btn btn-default" href="./downloads/pamphlet-2017.pdf" role="button">大会パンフレット（ＰＤＦ）&nbsp;<span class="fa fa-download" aria-hidden="true"></span></a></div>
           </div>
         </div>
       </div>
@@ -973,29 +957,15 @@
     <div class="container">
       <aside class="l-footer__ad">
         <div class="row row-xs c-banners">
-          <div class="col-xs-3 c-banner">
-            <img class="img-responsive u-margin-variable--bottom" src="http://placehold.jp/200x80.png" alt="協賛広告募集中">
+          <div class="col-xs-3">
+            <div class="c-banner"><img src="./.assets/thumbnail/footer-banner-support-240wi.png" alt="協賛広告募集中" width="200" height="80" class="img-responsive u-margin-variable--bottom"></div>
           </div>
           <div class="col-xs-3 c-banner">
-            <img class="img-responsive u-margin-variable--bottom" src="./images/footer-banner-support.png" alt="協賛広告募集中">
+            <a  class="c-banner" href="https://www.yahoo.co.jp/" title="協賛広告募集中１" target="_blank"><img class="img-responsive u-margin-variable--bottom" src="./.assets/thumbnail/footer-banner-support-1-240wi.png" alt="協賛広告募集中１"></a>
           </div>
           <div class="col-xs-3 c-banner">
-            <img class="img-responsive u-margin-variable--bottom" src="./images/footer-banner-support.png" alt="協賛広告募集中">
-          </div>
-          <div class="col-xs-3 c-banner">
-            <img class="img-responsive u-margin-variable--bottom" src="./images/footer-banner-support.png" alt="協賛広告募集中">
-          </div>
-          <div class="col-xs-3 c-banner">
-            <img class="img-responsive u-margin-variable--bottom" src="./images/footer-banner-support.png" alt="協賛広告募集中">
-          </div>
-          <div class="col-xs-3 c-banner">
-            <img class="img-responsive u-margin-variable--bottom" src="./images/footer-banner-support.png" alt="協賛広告募集中">
-          </div>
-          <div class="col-xs-3 c-banner">
-            <img class="img-responsive u-margin-variable--bottom" src="./images/footer-banner-support.png" alt="協賛広告募集中">
-          </div>
-          <div class="col-xs-3 c-banner">
-            <img class="img-responsive u-margin-variable--bottom" src="./images/footer-banner-support.png" alt="協賛広告募集中">
+            <div class="c-banner"><img class="img-responsive u-margin-variable--bottom" src="./.assets/thumbnail/DSC_0302-240wi.jpg"
+              alt="DSC_0302.jpg"></div>
           </div>
         </div>
       </aside>
@@ -1045,10 +1015,10 @@
       <aside class="l-footer__links">
         <div class="row c-banners">
           <div class="col-xs-6 col-sm-offset-3 col-sm-3">
-            <a class="c-banner" href="http://www.sakurajima-kinkowan-geo.jp/" target="_blank"><img class="img-responsive" src="./images/banner-sakurajima-kinkowan-geo.png" alt="桜島・錦江湾ジオパーク"></a>
+            <a class="c-banner" href="http://www.sakurajima-kinkowan-geo.jp/" target="_blank"><img src="./images/banner-sakurajima-kinkowan-geo.png" alt="桜島・錦江湾ジオパーク" width="150" height="150" class="img-responsive"></a>
           </div>
-          <div class="col-xs-6 col-sm-3">
-            <a class="c-banner" href="http://www.meijiishin150countdown.com/" target="_blank"><img class="img-responsive" src="./images/banner-meijiishin150countdown.png" alt="明治維新150周年 維新のふるさと鹿児島市"></a>
+          <div class="col-xs-6 col-sm-3 ">
+            <a class="c-banner" href="http://www.meijiishin150countdown.com/" target="_blank"><img src="./images/banner-meijiishin150countdown.png" alt="明治維新150周年 維新のふるさと鹿児島市" width="210" height="151" class="img-responsive"></a>
           </div>
         </div>
       </aside>
