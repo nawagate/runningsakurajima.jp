@@ -88,9 +88,9 @@
     </mt:AssetsHeader>
     <div class="col-xs-3">
       <mt:If tag="CustomFieldValue" identifier="NcImageLinkUrl">
-        <a class="c-banner" href="<mt:CustomFieldValue identifier="NcImageLinkUrl">" title="<mt:AssetLabel>" target="_blank"><img class="img-responsive u-margin-variable--bottom" src="<mt:AssetThumbnailURL width="240">" alt="<mt:AssetLabel>"></a>
+        <a class="c-banner" href="<mt:CustomFieldValue identifier="NcImageLinkUrl">" title="<mt:AssetLabel>" target="_blank"><img class="img-responsive u-margin-variable--bottom" src="<mt:AssetThumbnailURL width="240">" alt="<mt:AssetLabel>" width="<mt:AssetProperty property="image_width">"></a>
       <mt:Else>
-        <div class="c-banner"><img class="img-responsive u-margin-variable--bottom" src="<mt:AssetThumbnailURL width="240">" alt="<mt:AssetLabel>"></div>
+        <div class="c-banner"><img class="img-responsive u-margin-variable--bottom" src="<mt:AssetThumbnailURL width="240">" alt="<mt:AssetLabel>" width="<mt:AssetProperty property="image_width">"></div>
       </mt:If>
     </div>
     <mt:AssetsFooter>
@@ -138,7 +138,7 @@
         <dt>特別協賛</dt>
         <dd>
           <ul>
-            <li><img src="<mt:WebsiteURL>images/footer-ntt-nishinihon.png" alt="ＮＴＴ西日本"></li>
+            <li><img src="<mt:WebsiteURL>images/footer-ntt-nishinihon.png" alt="ＮＴＴ西日本" width="118" height="26"></li>
           </ul>
         </dd>
       </dl>
