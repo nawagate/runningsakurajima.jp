@@ -89,6 +89,11 @@ elements:
             label: ニュース TOP
             outfile: news.html
             rebuild_me: 1
+          robots_txt:
+            filename: robots.txt.mtml
+            label: robots.txt
+            outfile: robots.txt
+            rebuild_me: 1
         individual:
           entry:
             filename: entry.mtml
