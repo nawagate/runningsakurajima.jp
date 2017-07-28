@@ -59,7 +59,7 @@ $brand-danger: $aka;
 // //** Background color for `<body>`.
 // $body-bg:               #fff !default;
 // //** Global text color on `<body>`.
-$text-color:            $palette-mono3;
+$text-color: $palette-mono3;
 // //** Global textual link color.
 $link-color: $brand-primary;
 // //** Link hover color set via `darken()` function.
@@ -147,9 +147,9 @@ $table-border-color: $palette-main01;
 // //
 // //## For each of Bootstrap's buttons, define text, background and border color.
 // $btn-font-weight:                normal !default;
-$btn-default-color:              $text-color;
-$btn-default-bg:                $palette-monof;
-$btn-default-border:             $palette-monoe;
+$btn-default-color: $text-color;
+$btn-default-bg: $palette-monof;
+$btn-default-border: $palette-monoe;
 // $btn-primary-color:              #fff !default;
 // $btn-primary-bg:                 $brand-primary !default;
 // $btn-primary-border:             darken($btn-primary-bg, 5%) !default;
@@ -424,7 +424,7 @@ $navbar-default-toggle-icon-bar-bg: $palette-monof;
 // $state-warning-text:             #8a6d3b !default;
 $state-warning-bg: $paris-daisy;
 // $state-warning-border:           darken(adjust-hue($state-warning-bg, -10), 5%) !default;
-// $state-danger-text:              #a94442 !default;
+$state-danger-text: $aka;
 // $state-danger-bg:                #f2dede !default;
 // $state-danger-border:            darken(adjust-hue($state-danger-bg, -10), 5%) !default;
 // //== Tooltips
@@ -521,12 +521,12 @@ $state-warning-bg: $paris-daisy;
 // $alert-info-bg:               $state-info-bg !default;
 // $alert-info-text:             $state-info-text !default;
 // $alert-info-border:           $state-info-border !default;
-// $alert-warning-bg:            $state-warning-bg !default;
-// $alert-warning-text:          $state-warning-text !default;
-// $alert-warning-border:        $state-warning-border !default;
-// $alert-danger-bg:             $state-danger-bg !default;
-// $alert-danger-text:           $state-danger-text !default;
-// $alert-danger-border:         $state-danger-border !default;
+$alert-warning-bg: $palette-monof;
+$alert-warning-text: $aka;
+$alert-warning-border: $aka;
+$alert-danger-bg: $palette-monof;
+$alert-danger-text: $aka;
+$alert-danger-border: $aka;
 // //== Progress bars
 // //
 // //##
@@ -742,14 +742,28 @@ ul {
   padding-left: 2em;
 }
 
-table {
-  font-size: 13px;
+
+.table-responsive {
+  @media(max-width: $screen-xs-max) {
+    margin-bottom: 30px;
+    &::-webkit-scrollbar {
+      height: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 5px;
+      background: $palette-monoa;
+    }
+    &::-webkit-scrollbar-track-piece {
+      background: $palette-monoe;
+    }
+  }
+}
+
+.table {
+  font-size: 14px;
   thead th {
     background-color: lighten($palette-main01, 59%);
     color: $palette-main01;
-  }
-  tbody th {
-    background-color: lighten($palette-mono0, 98%);
   }
 }
 
@@ -935,6 +949,9 @@ table {
     &__pamphlet {
       margin-top: 20px;
       text-align: center;
+      .btn {
+        margin-bottom: 15px;
+      }
     }
   }
   &__ad {
@@ -955,8 +972,11 @@ table {
     }
   }
   &__links {
+    background-color: $palette-monoe;
     margin-top: $line-height-computed;
     margin-bottom: $line-height-computed;
+    padding-top: $line-height-computed;
+    padding-bottom: $line-height-computed;
   }
   &__copyright {
     margin-top: ($line-height-computed / 2);
@@ -1076,8 +1096,9 @@ table {
     border: 2px solid $gray-lighter;
     border-radius: 8px;
     background: $palette-monof;
+    word-break: break-all;
     @media (max-width: $screen-xs-max) {
-    //   float: right;
+      //   float: right;
       margin-left: 90px;
     }
     @media(min-width:$screen-sm-min) {
@@ -1334,10 +1355,19 @@ table {
     .container {
       max-width: 800px;
     }
+    @media (min-width: $screen-md-min) {
+      .dl-horizontal dt {
+        text-align: left;
+        width: 220px;
+      }
+    }
   }
   &--entry {
     .container {
       max-width: 800px;
+      > .panel > .panel-body {
+        padding: 30px;
+      }
     }
   }
   &--access {
@@ -1362,25 +1392,30 @@ table {
           &:before {
             top: -12px;
             left: -40px;
-            color: $palette-main05;
+            color: $palette-main01;
             content: "\f041";
             font-size: 30px;
           }
         }
-        &--bus:before {
-          content: "\f207";
-        }
-        &--ship:before {
-          content: "\f21a";
-        }
-        &--subway:before {
-          content: "\f239";
-        }
-        &--car:before {
-          content: "\f1b9";
-        }
-        &--walk:before {
-          content: "\f183";
+        &--arrow {
+          &:before {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: -34px;
+            height: 10px;
+            border-top: 10px solid $palette-main05;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+          }
+          &:after {
+            top: 0;
+            left: -27px;
+            content: "";
+            position: absolute;
+            height: 100%;
+            border-left: 2px dotted $palette-main05;
+          }
         }
       }
     }
@@ -1632,6 +1667,9 @@ table {
 .u-text {
   &--big {
     font-size: 1.25em;
+  }
+  &--small {
+    font-size: 0.75em;
   }
   &--bold {
     font-weight: bold;
