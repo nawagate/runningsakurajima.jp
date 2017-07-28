@@ -75,29 +75,32 @@
         <div class="col-sm-6 l-footer__info__pamphlet">
           <p>大会パンフレットをＰＤＦにてご覧いただけます。</p>
           <div><a class="btn btn-default" href="<mt:WebsiteURL>downloads/pamphlet-2017.pdf" role="button">大会パンフレット（ＰＤＦ）&nbsp;<span class="fa fa-download" aria-hidden="true"></span></a></div>
+          <p class="u-text--small"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>&nbsp;印刷した専用振替払込用紙でのお申込みはできません。</p>
         </div>
       </div>
     </div>
   </div>
-  <div class="container">
-    <mt:Assets lastn="0" type="image" field:NcImageAd="1">
-      <mt:AssetsHeader>
-        <aside class="l-footer__ad">
+  <mt:Assets lastn="0" type="image" field:NcImageAd="1">
+    <mt:AssetsHeader>
+      <aside class="l-footer__ad">
+        <div class="container">
           <div class="row row-xs c-banners">
-      </mt:AssetsHeader>
-      <div class="col-xs-3">
-        <mt:If tag="CustomFieldValue" identifier="NcImageLinkUrl">
-          <a class="c-banner" href="<mt:CustomFieldValue identifier="NcImageLinkUrl">" title="<mt:AssetLabel>" target="_blank"><img class="img-responsive u-margin-variable--bottom" src="<mt:AssetThumbnailURL width="240">" alt="<mt:AssetLabel>"></a>
-        <mt:Else>
-          <div class="c-banner"><img class="img-responsive u-margin-variable--bottom" src="<mt:AssetThumbnailURL width="240">" alt="<mt:AssetLabel>"></div>
-        </mt:If>
-      </div>
-      <mt:AssetsFooter>
+    </mt:AssetsHeader>
+    <div class="col-xs-3">
+      <mt:If tag="CustomFieldValue" identifier="NcImageLinkUrl">
+        <a class="c-banner" href="<mt:CustomFieldValue identifier="NcImageLinkUrl">" title="<mt:AssetLabel>" target="_blank"><img class="img-responsive u-margin-variable--bottom" src="<mt:AssetThumbnailURL width="240">" alt="<mt:AssetLabel>"></a>
+      <mt:Else>
+        <div class="c-banner"><img class="img-responsive u-margin-variable--bottom" src="<mt:AssetThumbnailURL width="240">" alt="<mt:AssetLabel>"></div>
+      </mt:If>
+    </div>
+    <mt:AssetsFooter>
           </div>
-        </aside>
-      </mt:AssetsFooter>
-    </mt:Assets>
-    <aside class="l-footer__sponsor">
+        </div>
+      </aside>
+    </mt:AssetsFooter>
+  </mt:Assets>
+  <aside class="l-footer__sponsor">
+    <div class="container">
       <dl class="dl-horizontal">
         <dt>主催</dt>
         <dd>
@@ -139,8 +142,10 @@
           </ul>
         </dd>
       </dl>
-    </aside>
-    <aside class="l-footer__links">
+    </div>
+  </aside>
+  <aside class="l-footer__links">
+    <div class="container">
       <div class="row c-banners">
         <div class="col-xs-6 col-sm-offset-3 col-sm-3">
           <a class="c-banner" href="http://www.sakurajima-kinkowan-geo.jp/" target="_blank"><img class="img-responsive" src="<mt:WebsiteURL>images/banner-sakurajima-kinkowan-geo.png" alt="桜島・錦江湾ジオパーク" width="150" height="150"></a>
@@ -149,9 +154,9 @@
           <a class="c-banner" href="http://www.meijiishin150countdown.com/" target="_blank"><img class="img-responsive" src="<mt:WebsiteURL>images/banner-meijiishin150countdown.png" alt="明治維新150周年 維新のふるさと鹿児島市" width="210" height="151"></a>
         </div>
       </div>
-    </aside>
-    <p class="l-footer__copyright">
-      <small>&copy; RUNNING SAKURAJIMA</small>
-    </p>
-  </div>
+    </div>
+  </aside>
+  <p class="l-footer__copyright">
+    <small>&copy; RUNNING SAKURAJIMA</small>
+  </p>
 </footer>
